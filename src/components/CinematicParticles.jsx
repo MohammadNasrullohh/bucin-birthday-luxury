@@ -68,19 +68,19 @@ export default function CinematicParticles() {
           }
         }
 
-        // Draw soft glow
-        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 3);
-        gradient.addColorStop(0, `rgba(223, 186, 132, ${Math.max(0, p.alpha)})`);
-        gradient.addColorStop(0.5, `rgba(245, 228, 195, ${Math.max(0, p.alpha * 0.4)})`);
-        gradient.addColorStop(1, 'rgba(223, 186, 132, 0)');
+        // Draw soft romantic pink/crimson glow
+        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 3.5);
+        gradient.addColorStop(0, `rgba(244, 63, 94, ${Math.max(0, p.alpha)})`);
+        gradient.addColorStop(0.5, `rgba(251, 113, 133, ${Math.max(0, p.alpha * 0.5)})`);
+        gradient.addColorStop(1, 'rgba(244, 63, 94, 0)');
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * 3, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.size * 3.5, 0, Math.PI * 2);
         ctx.fill();
 
         // Core bright point
-        ctx.fillStyle = `rgba(255, 248, 235, ${Math.max(0, p.alpha * 0.9)})`;
+        ctx.fillStyle = `rgba(255, 230, 236, ${Math.max(0, p.alpha * 0.95)})`;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size * 0.6, 0, Math.PI * 2);
         ctx.fill();

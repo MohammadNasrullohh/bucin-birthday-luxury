@@ -334,7 +334,7 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
           <button
             type="button"
             onClick={togglePlay}
-            className="w-10 h-10 rounded-full bg-luxury-gold text-black flex items-center justify-center hover:scale-105 active:scale-95 transition-transform"
+            className="w-10 h-10 rounded-full bg-rose-500 text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-rose-950/60"
           >
             {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current ml-0.5" />}
           </button>

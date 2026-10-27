@@ -137,7 +137,7 @@ export default function HeroSection() {
         <button
           type="button"
           onClick={() => setIsMovieModeOpen(true)}
-          className="px-8 py-4 rounded-full bg-gradient-to-r from-[#DFBA84] via-[#F5E4C3] to-[#B88D4E] text-[#09080C] font-bold text-xs tracking-widest uppercase shadow-2xl shadow-amber-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
+          className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-bold text-xs tracking-widest uppercase shadow-2xl shadow-rose-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
         >
           <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping" />
           <Film className="w-4 h-4 fill-current" />

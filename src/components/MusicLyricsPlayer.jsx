@@ -119,17 +119,17 @@ export default function MusicLyricsPlayer() {
               <div className="absolute inset-20 rounded-full border border-white/5 pointer-events-none" />
 
               {/* Center Vinyl Label */}
-              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-[#8E6D3B] via-[#DFBA84] to-[#F5E4C3] p-[2px] shadow-xl flex items-center justify-center">
-                <div className="w-full h-full rounded-full bg-[#14121E] flex flex-col items-center justify-center text-center p-2 border border-luxury-gold/50">
-                  <Heart className="w-4 h-4 text-luxury-gold fill-luxury-gold mb-0.5 animate-pulse" />
-                  <span className="text-[9px] font-bold tracking-widest text-luxury-gold uppercase leading-tight font-serif">
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-[#9F1239] via-[#F43F5E] to-[#FDA4AF] p-[2px] shadow-xl flex items-center justify-center">
+                <div className="w-full h-full rounded-full bg-[#1C0916] flex flex-col items-center justify-center text-center p-2 border border-rose-400/50">
+                  <Heart className="w-4 h-4 text-rose-400 fill-rose-500 mb-0.5 animate-pulse" />
+                  <span className="text-[9px] font-bold tracking-widest text-rose-300 uppercase leading-tight font-serif">
                     DASH UCIHA
                   </span>
-                  <span className="text-[8px] text-luxury-muted/90 tracking-tight font-sans">
+                  <span className="text-[8px] text-rose-200/80 tracking-tight font-sans">
                     Merindukanmu
                   </span>
                   {/* Spindle hole */}
-                  <div className="w-3 h-3 rounded-full bg-black border border-luxury-gold/40 mt-1" />
+                  <div className="w-3 h-3 rounded-full bg-black border border-rose-400/40 mt-1" />
                 </div>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function MusicLyricsPlayer() {
                 <button
                   type="button"
                   onClick={togglePlay}
-                  className="w-13 h-13 rounded-full bg-gradient-to-r from-[#F5E4C3] via-[#DFBA84] to-[#B88D4E] text-luxury-dark flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-xl shadow-amber-950/50 p-3"
+                  className="w-13 h-13 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-xl shadow-rose-950/60 p-3"
                   title={isPlaying ? 'Jeda' : 'Putar'}
                 >
                   {isPlaying ? (

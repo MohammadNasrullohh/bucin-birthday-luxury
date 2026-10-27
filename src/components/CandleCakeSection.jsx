@@ -9,14 +9,14 @@ export default function CandleCakeSection() {
   const [secretWish, setSecretWish] = useState('');
   const [isWishSaved, setIsWishSaved] = useState(false);
 
-  // Trigger luxury golden confetti
+  // Trigger luxury golden/rose confetti
   const triggerConfetti = () => {
     // Left side burst
     confetti({
       particleCount: 90,
       spread: 75,
       origin: { y: 0.65, x: 0.25 },
-      colors: ['#DFBA84', '#F5E4C3', '#E8BAC5', '#FFFFFF', '#B88D4E'],
+      colors: ['#F43F5E', '#FDA4AF', '#E11D48', '#FFE4E8', '#FFFFFF'],
     });
 
     // Right side burst
@@ -24,7 +24,7 @@ export default function CandleCakeSection() {
       particleCount: 90,
       spread: 75,
       origin: { y: 0.65, x: 0.75 },
-      colors: ['#DFBA84', '#F5E4C3', '#E8BAC5', '#FFFFFF', '#B88D4E'],
+      colors: ['#F43F5E', '#FDA4AF', '#E11D48', '#FFE4E8', '#FFFFFF'],
     });
 
     // Center Fireworks star burst
@@ -34,7 +34,7 @@ export default function CandleCakeSection() {
         spread: 110,
         origin: { y: 0.45 },
         shapes: ['circle'],
-        colors: ['#DFBA84', '#FFF0D6', '#E2A9B0'],
+        colors: ['#FB7185', '#FFF1F2', '#BE123C'],
       });
     }, 350);
   };
@@ -123,10 +123,10 @@ export default function CandleCakeSection() {
           <div className="w-1 h-3 bg-neutral-800 rounded-t" />
 
           {/* Candle Stick */}
-          <div className="w-5 h-16 rounded-t-sm bg-gradient-to-r from-[#DFBA84] via-[#FFF1D6] to-[#B88D4E] shadow-md border-t border-white/40 flex flex-col items-center justify-between py-1">
-            <span className="w-full h-[1px] bg-amber-900/20" />
-            <span className="w-full h-[1px] bg-amber-900/20" />
-            <span className="w-full h-[1px] bg-amber-900/20" />
+          <div className="w-5 h-16 rounded-t-sm bg-gradient-to-r from-[#FDA4AF] via-[#FFF1F2] to-[#BE123C] shadow-md border-t border-white/40 flex flex-col items-center justify-between py-1">
+            <span className="w-full h-[1px] bg-rose-950/20" />
+            <span className="w-full h-[1px] bg-rose-950/20" />
+            <span className="w-full h-[1px] bg-rose-950/20" />
           </div>
         </div>
 
@@ -166,7 +166,7 @@ export default function CandleCakeSection() {
               whileTap={{ scale: 0.96 }}
               type="button"
               onClick={handleBlowCandle}
-              className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#F5E4C3] via-[#DFBA84] to-[#A07A44] text-[#09080C] font-semibold text-xs tracking-widest uppercase shadow-xl shadow-amber-950/60 transition-all flex items-center justify-center gap-2"
+              className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-widest uppercase shadow-xl shadow-rose-950/60 transition-all flex items-center justify-center gap-2"
             >
               <Flame className="w-4 h-4 fill-current" />
               <span>Tiup Lilin Sekarang</span>

@@ -20,41 +20,41 @@
   }
 
   body {
-    background-color: #07060A;
-    color: #FAF7F2;
+    background-color: #080306;
+    color: #FFF5F7;
     overflow-x: hidden;
   }
 }
 
-/* Custom luxury gradients and effects */
+/* Custom luxury romantic pink & crimson gradients */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #FFF0D6 0%, #DFBA84 50%, #B88D4E 100%);
+  background: linear-gradient(135deg, #FFF1F3 0%, #FDA4AF 35%, #F43F5E 70%, #BE123C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-rose-gold {
-  background: linear-gradient(135deg, #FDECEF 0%, #E8BAC5 50%, #C27888 100%);
+  background: linear-gradient(135deg, #FFF1F3 0%, #FB7185 50%, #9F1239 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .border-gold-subtle {
-  border-color: rgba(223, 186, 132, 0.2);
+  border-color: rgba(244, 63, 94, 0.22);
 }
 
 .bg-luxury-glass {
-  background: rgba(17, 16, 25, 0.72);
+  background: rgba(23, 9, 18, 0.75);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(223, 186, 132, 0.16);
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.22);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .bg-luxury-card {
-  background: radial-gradient(circle at 50% 0%, rgba(223, 186, 132, 0.05) 0%, rgba(17, 15, 26, 0.95) 70%);
-  border: 1px solid rgba(223, 186, 132, 0.18);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+  background: radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.12) 0%, rgba(18, 7, 14, 0.96) 70%);
+  border: 1px solid rgba(244, 63, 94, 0.22);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
 }
 
 /* Candle flame animation */
@@ -62,22 +62,22 @@
   0%, 100% {
     transform: scale(1) rotate(-1deg);
     opacity: 0.95;
-    filter: drop-shadow(0 0 15px rgba(255, 170, 50, 0.8));
+    filter: drop-shadow(0 0 16px rgba(244, 63, 94, 0.85));
   }
   25% {
     transform: scale(1.08, 0.95) rotate(2deg);
     opacity: 1;
-    filter: drop-shadow(0 0 22px rgba(255, 190, 80, 0.9));
+    filter: drop-shadow(0 0 24px rgba(251, 113, 133, 0.95));
   }
   50% {
     transform: scale(0.96, 1.05) rotate(-2deg);
     opacity: 0.9;
-    filter: drop-shadow(0 0 12px rgba(255, 150, 40, 0.75));
+    filter: drop-shadow(0 0 14px rgba(225, 29, 72, 0.8));
   }
   75% {
     transform: scale(1.04, 0.98) rotate(1deg);
     opacity: 1;
-    filter: drop-shadow(0 0 18px rgba(255, 180, 60, 0.85));
+    filter: drop-shadow(0 0 20px rgba(244, 63, 94, 0.9));
   }
 }
 
@@ -93,7 +93,7 @@
     transform: scale(1);
   }
   50% {
-    opacity: 0.55;
+    opacity: 0.6;
     transform: scale(1.1);
   }
 }
@@ -134,4 +134,3 @@
 .animate-film-roll {
   animation: filmRoll 35s linear infinite;
 }
-

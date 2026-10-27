@@ -90,17 +90,17 @@ export default function IntroScreen() {
           {/* Wax Seal Button (Interactive Trigger) */}
           <div className="relative group cursor-pointer mb-8" onClick={handleOpen}>
             {/* Pulsing ring */}
-            <div className="absolute -inset-4 rounded-full bg-luxury-gold/20 blur-md group-hover:bg-luxury-gold/35 transition-all duration-500 animate-pulse-subtle" />
+            <div className="absolute -inset-4 rounded-full bg-rose-500/25 blur-md group-hover:bg-rose-500/40 transition-all duration-500 animate-pulse-subtle" />
 
             <button
               type="button"
-              className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#F5E4C3] via-[#DFBA84] to-[#7A5A2B] p-[2.5px] shadow-2xl shadow-amber-950/70 transition-transform duration-300 group-hover:scale-105 active:scale-95 flex items-center justify-center"
+              className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#FDA4AF] via-[#F43F5E] to-[#881337] p-[2.5px] shadow-2xl shadow-rose-950/70 transition-transform duration-300 group-hover:scale-105 active:scale-95 flex items-center justify-center"
               title="Klik untuk membuka segel dan memutar lagu"
             >
-              <div className="w-full h-full rounded-full bg-[#181422] flex flex-col items-center justify-center border border-luxury-gold/50 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-luxury-gold/25 to-transparent opacity-70" />
-                <Heart className="w-8 h-8 text-luxury-gold fill-luxury-gold/40 mb-1 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-[10px] font-serif tracking-widest text-luxury-gold uppercase font-bold">
+              <div className="w-full h-full rounded-full bg-[#1A0A14] flex flex-col items-center justify-center border border-rose-400/50 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-rose-500/30 to-transparent opacity-70" />
+                <Heart className="w-8 h-8 text-rose-400 fill-rose-500/50 mb-1 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-[10px] font-serif tracking-widest text-rose-200 uppercase font-bold">
                   Buka Segel
                 </span>
               </div>

@@ -9,22 +9,22 @@ export default {
     extend: {
       colors: {
         luxury: {
-          dark: '#08070B',
-          surface: '#111019',
-          card: '#161424',
-          border: 'rgba(223, 186, 132, 0.15)',
+          dark: '#090407',
+          surface: '#140810',
+          card: '#1C0B17',
+          border: 'rgba(244, 63, 94, 0.22)',
           gold: {
-            light: '#F5E4C3',
-            DEFAULT: '#DFBA84',
-            dark: '#B88D4E',
+            light: '#FFE4E8',
+            DEFAULT: '#FB7185',
+            dark: '#E11D48',
           },
           rose: {
-            light: '#FCECEF',
-            DEFAULT: '#E8BAC5',
-            deep: '#8A3B4F',
+            light: '#FFF1F2',
+            DEFAULT: '#F43F5E',
+            deep: '#9F1239',
           },
-          ivory: '#F9F6F0',
-          muted: '#9E9AA7',
+          ivory: '#FFF5F7',
+          muted: '#B897A4',
         }
       },
       fontFamily: {
@@ -33,10 +33,10 @@ export default {
         script: ['"Cormorant Garamond"', 'cursive', 'serif'],
       },
       boxShadow: {
-        'glow-gold': '0 0 50px -10px rgba(223, 186, 132, 0.25)',
-        'glow-rose': '0 0 40px -10px rgba(232, 186, 197, 0.2)',
-        'luxury': '0 20px 50px -12px rgba(0, 0, 0, 0.7)',
-        'inner-gold': 'inset 0 1px 1px 0 rgba(223, 186, 132, 0.2)',
+        'glow-gold': '0 0 50px -10px rgba(244, 63, 94, 0.35)',
+        'glow-rose': '0 0 50px -10px rgba(225, 29, 72, 0.4)',
+        'luxury': '0 20px 50px -12px rgba(0, 0, 0, 0.8)',
+        'inner-gold': 'inset 0 1px 1px 0 rgba(244, 63, 94, 0.25)',
       },
       animation: {
         'float-slow': 'float 8s ease-in-out infinite',

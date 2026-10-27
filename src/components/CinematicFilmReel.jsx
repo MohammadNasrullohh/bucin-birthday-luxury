@@ -65,7 +65,7 @@ export default function CinematicFilmReel({ onOpenMovieMode }) {
         <button
           type="button"
           onClick={onOpenMovieMode}
-          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#DFBA84] via-[#F5E4C3] to-[#B88D4E] text-[#09080C] font-semibold text-xs tracking-wider uppercase shadow-xl shadow-amber-950/60 hover:scale-105 active:scale-95 transition-all"
+          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-wider uppercase shadow-xl shadow-rose-950/60 hover:scale-105 active:scale-95 transition-all"
         >
           <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
           <span>Putar Sebagai Film Sinematik (Full Cinema)</span>
@@ -79,7 +79,7 @@ export default function CinematicFilmReel({ onOpenMovieMode }) {
           {[...Array(60)].map((_, i) => (
             <span
               key={i}
-              className="flex-shrink-0 w-3.5 h-2 rounded-sm bg-luxury-gold/40 border border-luxury-gold/60"
+              className="flex-shrink-0 w-3.5 h-2 rounded-sm bg-rose-400/40 border border-rose-400/60"
             />
           ))}
         </div>
@@ -152,7 +152,7 @@ export default function CinematicFilmReel({ onOpenMovieMode }) {
           {[...Array(60)].map((_, i) => (
             <span
               key={i}
-              className="flex-shrink-0 w-3.5 h-2 rounded-sm bg-luxury-gold/40 border border-luxury-gold/60"
+              className="flex-shrink-0 w-3.5 h-2 rounded-sm bg-rose-400/40 border border-rose-400/60"
             />
           ))}
         </div>

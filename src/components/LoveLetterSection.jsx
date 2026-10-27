@@ -60,9 +60,9 @@ export default function LoveLetterSection() {
         <div className="flex flex-col sm:flex-row items-center justify-between pb-8 mb-8 border-b border-luxury-gold/15 gap-4">
           <div className="flex items-center gap-3">
             {/* Miniature Wax Seal */}
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#DFBA84] to-[#8E6D3B] p-[2px] shadow-md flex items-center justify-center">
-              <div className="w-full h-full rounded-full bg-[#1A1624] flex items-center justify-center border border-luxury-gold/40">
-                <Heart className="w-5 h-5 text-luxury-gold fill-luxury-gold/70" />
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FDA4AF] to-[#9F1239] p-[2px] shadow-md flex items-center justify-center">
+              <div className="w-full h-full rounded-full bg-[#1C0916] flex items-center justify-center border border-rose-400/50">
+                <Heart className="w-5 h-5 text-rose-400 fill-rose-500/80" />
               </div>
             </div>
             <div>

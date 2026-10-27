@@ -243,7 +243,7 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
       className={`relative group rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#181625] via-[#12111D] to-[#0A0910] border border-luxury-gold/25 shadow-2xl transition-all duration-300 ${rotation}`}
     >
       {/* Antique Brass Clip Ornament */}
-      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-4 py-1 rounded-full bg-gradient-to-r from-[#F5E4C3] via-[#DFBA84] to-[#8E6D3B] shadow-lg text-[9px] font-mono tracking-widest text-[#09080C] font-bold uppercase">
+      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-4 py-1 rounded-full bg-gradient-to-r from-[#FFE4E8] via-[#FB7185] to-[#BE123C] shadow-lg text-[9px] font-mono tracking-widest text-[#09080C] font-bold uppercase">
         <Film className="w-2.5 h-2.5" />
         <span>CINEMA MEMOIR #{index + 1}</span>
       </div>
