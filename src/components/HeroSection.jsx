@@ -4,7 +4,7 @@ import { useCelebration } from '../context/CelebrationContext';
 import { Sparkles, Heart, ChevronDown, Calendar, Clock, Music, Film } from 'lucide-react';
 
 export default function HeroSection() {
-  const { data } = useCelebration();
+  const { data, setIsMovieModeOpen } = useCelebration();
   const [timeElapsed, setTimeElapsed] = useState({
     days: 0,
     hours: 0,
@@ -134,20 +134,22 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.7 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
+        <button
+          type="button"
+          onClick={() => setIsMovieModeOpen(true)}
+          className="px-8 py-4 rounded-full bg-gradient-to-r from-[#DFBA84] via-[#F5E4C3] to-[#B88D4E] text-[#09080C] font-bold text-xs tracking-widest uppercase shadow-2xl shadow-amber-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
+        >
+          <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping" />
+          <Film className="w-4 h-4 fill-current" />
+          <span>Putar Film Sinematik Berjalan (Full Cinema)</span>
+        </button>
+
         <a
           href="#photos"
-          className="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#DFBA84] via-[#C59B63] to-[#A07A44] text-[#09080C] font-semibold text-xs tracking-widest uppercase shadow-xl shadow-amber-950/40 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+          className="px-6 py-3.5 rounded-full bg-luxury-surface/90 border border-luxury-gold/30 text-luxury-gold font-medium text-xs tracking-widest uppercase hover:bg-luxury-gold/15 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
         >
           <Heart className="w-4 h-4 fill-current" />
           <span>Lihat Dua Foto Kita</span>
-        </a>
-
-        <a
-          href="#music"
-          className="px-7 py-3.5 rounded-full bg-luxury-surface/90 border border-luxury-gold/30 text-luxury-gold font-medium text-xs tracking-widest uppercase hover:bg-luxury-gold/15 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-        >
-          <Music className="w-4 h-4" />
-          <span>Lagu & Lirik</span>
         </a>
       </motion.div>
 

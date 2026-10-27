@@ -23,6 +23,8 @@ export function CelebrationProvider({ children }) {
   const [activeTheme, setActiveTheme] = useState('midnight-gold'); // 'midnight-gold', 'champagne-silk', 'rose-noir'
   const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
   const [activePhotoModal, setActivePhotoModal] = useState(null);
+  const [isMovieModeOpen, setIsMovieModeOpen] = useState(false);
+  const [isAutoScrollActive, setIsAutoScrollActive] = useState(false);
 
   // Audio State
   const audioRef = useRef(null);
@@ -173,6 +175,10 @@ export function CelebrationProvider({ children }) {
         setIsCustomizerOpen,
         activePhotoModal,
         setActivePhotoModal,
+        isMovieModeOpen,
+        setIsMovieModeOpen,
+        isAutoScrollActive,
+        setIsAutoScrollActive,
         // Audio
         isPlaying,
         togglePlay,

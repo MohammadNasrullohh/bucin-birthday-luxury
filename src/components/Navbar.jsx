@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCelebration } from '../context/CelebrationContext';
 import { 
   Play, 
@@ -8,8 +8,9 @@ import {
   Sliders, 
   Sparkles, 
   Heart,
-  Palette,
-  Image as ImageIcon
+  Film,
+  Compass,
+  ArrowDownCircle
 } from 'lucide-react';
 
 export default function Navbar() {
@@ -20,12 +21,32 @@ export default function Navbar() {
     volume, 
     changeVolume,
     setIsCustomizerOpen,
-    activeTheme,
-    setActiveTheme
+    setIsMovieModeOpen,
+    isAutoScrollActive,
+    setIsAutoScrollActive
   } = useCelebration();
 
-  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
   const [prevVolume, setPrevVolume] = useState(0.85);
+
+  // Smooth Auto-Scroll loop
+  useEffect(() => {
+    let scrollRafId;
+    if (isAutoScrollActive) {
+      const scrollStep = () => {
+        window.scrollBy(0, 1.2);
+        // If reached bottom, stop
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+          setIsAutoScrollActive(false);
+          return;
+        }
+        scrollRafId = requestAnimationFrame(scrollStep);
+      };
+      scrollRafId = requestAnimationFrame(scrollStep);
+    }
+    return () => {
+      if (scrollRafId) cancelAnimationFrame(scrollRafId);
+    };
+  }, [isAutoScrollActive, setIsAutoScrollActive]);
 
   const toggleMute = () => {
     if (volume > 0) {
@@ -37,16 +58,16 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: 'Dua Foto Kita', href: '#photos' },
+    { label: 'Roll Film', href: '#film-reel' },
+    { label: 'Dua Foto', href: '#photos' },
     { label: 'Lagu & Lirik', href: '#music' },
     { label: 'Tiup Lilin', href: '#candle' },
     { label: 'Surat Rahasia', href: '#letter' },
-    { label: 'Kapsul Harapan', href: '#wishes' },
   ];
 
   return (
     <header className="fixed top-4 inset-x-0 z-40 flex justify-center px-4 pointer-events-none">
-      <div className="pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-4 py-2.5 sm:px-6 sm:py-3 rounded-full bg-luxury-glass border border-luxury-gold/20 shadow-2xl shadow-black/80 max-w-5xl w-full">
+      <div className="pointer-events-auto flex items-center justify-between gap-2 sm:gap-4 px-4 py-2.5 sm:px-6 sm:py-3 rounded-full bg-luxury-glass border border-luxury-gold/20 shadow-2xl shadow-black/80 max-w-6xl w-full backdrop-blur-xl">
         
         {/* Brand / Name Tag */}
         <a 
@@ -62,7 +83,7 @@ export default function Navbar() {
         </a>
 
         {/* Center Nav Links (Hidden on small screens) */}
-        <nav className="hidden md:flex items-center gap-1 sm:gap-2">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map((item) => (
             <a
               key={item.href}
@@ -76,6 +97,33 @@ export default function Navbar() {
 
         {/* Audio Player Pill & Controls */}
         <div className="flex items-center gap-2 sm:gap-3">
+          
+          {/* Cinema Movie Mode Button (NEW!) */}
+          <button
+            type="button"
+            onClick={() => setIsMovieModeOpen(true)}
+            className="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full bg-gradient-to-r from-[#DFBA84] via-[#F5E4C3] to-[#B88D4E] text-[#09080C] text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-950/40 hover:scale-105 active:scale-95 transition-all"
+            title="Buka Mode Bioskop Otomatis"
+          >
+            <Film className="w-3.5 h-3.5" />
+            <span>Mode Film</span>
+          </button>
+
+          {/* Auto Scroll Toggle Button */}
+          <button
+            type="button"
+            onClick={() => setIsAutoScrollActive(!isAutoScrollActive)}
+            className={`hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all ${
+              isAutoScrollActive
+                ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 animate-pulse'
+                : 'bg-luxury-surface/70 text-luxury-gold border-luxury-gold/25 hover:bg-luxury-gold/10'
+            }`}
+            title="Gulir otomatis sinematik tanpa tangan"
+          >
+            <Compass className={`w-3.5 h-3.5 ${isAutoScrollActive ? 'animate-spin' : ''}`} />
+            <span>{isAutoScrollActive ? 'Jeda Gulir' : 'Auto-Gulir'}</span>
+          </button>
+
           {/* Song Mini Widget */}
           <div className="flex items-center gap-2 pl-2 pr-3 py-1 rounded-full bg-luxury-surface/80 border border-luxury-gold/20">
             <button
@@ -89,7 +137,7 @@ export default function Navbar() {
 
             {/* Song title & animated equalizer bars */}
             <div className="flex flex-col justify-center">
-              <span className="text-[10px] sm:text-xs font-medium text-luxury-gold/90 truncate max-w-[110px] sm:max-w-[140px]">
+              <span className="text-[10px] sm:text-xs font-medium text-luxury-gold/90 truncate max-w-[90px] sm:max-w-[130px]">
                 Dash Uciha — Merindukanmu
               </span>
               <div className="flex items-center gap-0.5 h-2">
@@ -114,22 +162,21 @@ export default function Navbar() {
             <button
               type="button"
               onClick={toggleMute}
-              className="text-luxury-muted hover:text-luxury-gold p-1 transition-colors ml-1"
+              className="text-luxury-muted hover:text-luxury-gold p-1 transition-colors ml-1 hidden sm:inline"
               title={volume === 0 ? 'Nyalakan Suara' : 'Bisukan Suara'}
             >
               {volume === 0 ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
             </button>
           </div>
 
-          {/* Customize Button (User can edit photos, names, letter) */}
+          {/* Customize Button */}
           <button
             type="button"
             onClick={() => setIsCustomizerOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-luxury-gold/15 hover:bg-luxury-gold/25 border border-luxury-gold/30 text-luxury-gold text-xs font-medium transition-all"
+            className="p-2 sm:px-3 sm:py-1.5 rounded-full bg-luxury-gold/15 hover:bg-luxury-gold/25 border border-luxury-gold/30 text-luxury-gold text-xs font-medium transition-all"
             title="Kustomisasi Foto & Ucapan"
           >
             <Sliders className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Kustomisasi</span>
           </button>
         </div>
 

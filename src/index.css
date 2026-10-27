@@ -120,3 +120,18 @@
   animation: vinylSpin 14s linear infinite;
   animation-play-state: paused;
 }
+
+/* Continuous film roll marquee */
+@keyframes filmRoll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
+}
+
+.animate-film-roll {
+  animation: filmRoll 35s linear infinite;
+}
+
