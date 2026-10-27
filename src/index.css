@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #07060A;
+    color: #FAF7F2;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom luxury gradients and effects */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0D6 0%, #DFBA84 50%, #B88D4E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gold {
+  background: linear-gradient(135deg, #FDECEF 0%, #E8BAC5 50%, #C27888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border-color: rgba(223, 186, 132, 0.2);
+}
+
+.bg-luxury-glass {
+  background: rgba(17, 16, 25, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(223, 186, 132, 0.16);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.bg-luxury-card {
+  background: radial-gradient(circle at 50% 0%, rgba(223, 186, 132, 0.05) 0%, rgba(17, 15, 26, 0.95) 70%);
+  border: 1px solid rgba(223, 186, 132, 0.18);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+}
+
+/* Candle flame animation */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 15px rgba(255, 170, 50, 0.8));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(255, 190, 80, 0.9));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 12px rgba(255, 150, 40, 0.75));
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(255, 180, 60, 0.85));
+  }
+}
+
+.candle-flame {
+  animation: flameFlicker 1.8s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Smooth glowing pulse */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.1);
+  }
+}
+
+.ambient-glow {
+  animation: ambientGlow 8s infinite ease-in-out;
+}
+
+/* Vinyl rotation */
+@keyframes vinylSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-playing {
+  animation: vinylSpin 14s linear infinite;
+}
+
+.vinyl-paused {
+  animation: vinylSpin 14s linear infinite;
+  animation-play-state: paused;
+}
