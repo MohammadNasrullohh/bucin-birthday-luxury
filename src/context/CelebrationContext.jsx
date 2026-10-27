@@ -7,7 +7,7 @@ export function CelebrationProvider({ children }) {
   // Load saved state or default
   const [data, setData] = useState(() => {
     try {
-      const saved = localStorage.getItem('luxury_birthday_data_v2');
+      const saved = localStorage.getItem('luxury_birthday_data_v3');
       if (saved) {
         return JSON.parse(saved);
       }
@@ -38,7 +38,7 @@ export function CelebrationProvider({ children }) {
   // Sync data to localStorage
   useEffect(() => {
     try {
-      localStorage.setItem('luxury_birthday_data_v2', JSON.stringify(data));
+      localStorage.setItem('luxury_birthday_data_v3', JSON.stringify(data));
     } catch (e) {
       console.warn('Failed to save to localStorage', e);
     }
