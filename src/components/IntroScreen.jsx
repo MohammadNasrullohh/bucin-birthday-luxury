@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCelebration } from '../context/CelebrationContext';
-import { Sparkles, Music, Heart, Volume2, Film } from 'lucide-react';
+import { Sparkles, Music, Heart, Volume2 } from 'lucide-react';
 
 export default function IntroScreen() {
   const { data, hasStarted, startExperience } = useCelebration();
@@ -20,37 +20,15 @@ export default function IntroScreen() {
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 1 }}
-        exit={{ opacity: 0, scale: 1.04, filter: 'blur(10px)' }}
-        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-[#050408] text-luxury-ivory overflow-hidden select-none"
+        exit={{ opacity: 0, scale: 1.04, filter: 'blur(8px)' }}
+        transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-[#070306] text-luxury-ivory overflow-hidden select-none"
       >
-        {/* Cinematic Letterbox Top & Bottom Black Bars */}
-        <motion.div
-          animate={isOpening ? { height: 0 } : { height: '36px' }}
-          transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
-          className="absolute top-0 inset-x-0 bg-black z-30 flex items-center justify-between px-6 text-[10px] font-mono text-luxury-gold/50 tracking-widest border-b border-luxury-gold/15"
-        >
-          <span>CINEMA ARCHIVE • 2.39:1 SCOPE</span>
-          <span className="flex items-center gap-1.5 text-luxury-gold/70">
-            <Film className="w-3 h-3 text-luxury-gold" />
-            <span>24 FRAMES PER SECOND</span>
-          </span>
-        </motion.div>
-
-        <motion.div
-          animate={isOpening ? { height: 0 } : { height: '36px' }}
-          transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
-          className="absolute bottom-0 inset-x-0 bg-black z-30 flex items-center justify-between px-6 text-[10px] font-mono text-luxury-gold/50 tracking-widest border-t border-luxury-gold/15"
-        >
-          <span>KODAK VISION3 500T EMULSION</span>
-          <span>DASH UCIHA • MERINDUKANMU</span>
-        </motion.div>
-
-        {/* Ambient atmospheric glows */}
+        {/* Soft Ambient Rose & Ruby Lighting */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-luxury-gold/10 rounded-full blur-[140px] ambient-glow" />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-luxury-rose/10 rounded-full blur-[140px] ambient-glow" />
-          <div className="absolute inset-0 bg-grain opacity-40" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-rose-600/10 rounded-full blur-[140px] ambient-glow" />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-red-700/10 rounded-full blur-[140px] ambient-glow" />
+          <div className="absolute inset-0 bg-grain opacity-30" />
         </div>
 
         {/* Main Invitation Card / Wax Sealed Envelope */}
@@ -58,33 +36,30 @@ export default function IntroScreen() {
           initial={{ opacity: 0, y: 30, scale: 0.95 }}
           animate={
             isOpening
-              ? { scale: 1.1, opacity: 0, y: -20, filter: 'blur(8px)' }
+              ? { scale: 1.08, opacity: 0, y: -20, filter: 'blur(8px)' }
               : { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }
           }
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="relative max-w-md w-full mx-4 p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#181624] via-[#12101B] to-[#0A0910] border border-luxury-gold/30 shadow-2xl shadow-black/95 text-center flex flex-col items-center z-20"
+          className="relative max-w-md w-full mx-4 p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#1A0A15] via-[#140811] to-[#0A0409] border border-rose-400/30 shadow-2xl shadow-black/95 text-center flex flex-col items-center z-20"
         >
-          {/* Subtle Anamorphic gold lens streak */}
-          <div className="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-luxury-gold/60 to-transparent" />
-
-          {/* Top Gold Ornament */}
-          <div className="flex items-center gap-2 mb-6 text-luxury-gold/70 text-xs tracking-[0.3em] uppercase">
-            <span className="w-8 h-[1px] bg-luxury-gold/30" />
-            <Sparkles className="w-3.5 h-3.5 text-luxury-gold" />
-            <span>Arsip Eksklusif</span>
-            <span className="w-8 h-[1px] bg-luxury-gold/30" />
+          {/* Top Heart Badge */}
+          <div className="flex items-center gap-2 mb-6 text-rose-300 text-xs tracking-widest uppercase">
+            <span className="w-8 h-[1px] bg-rose-400/30" />
+            <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+            <span>Kado Spesial Untukmu</span>
+            <span className="w-8 h-[1px] bg-rose-400/30" />
           </div>
 
           {/* Recipient Title */}
-          <p className="font-serif italic text-luxury-gold text-lg mb-1">
-            Sebuah Persembahan Istimewa Untuk
+          <p className="font-serif italic text-rose-300 text-lg mb-1">
+            Selamat Ulang Tahun,
           </p>
           <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-gold-gradient mb-4">
             {data.partnerName}
           </h1>
 
           <p className="text-sm text-luxury-muted leading-relaxed mb-8 max-w-xs font-light">
-            Hari ini semesta tersenyum merayakan kehadiranmu. Sentuh segel lilin emas untuk membuka kisah sinematik kita dan menyalakan melodi kenangan.
+            Hari ini adalah hari paling membahagiakan karena kamu hadir di dunia. Sentuh segel hati di bawah untuk membuka surat cinta dan memutar lagu kenangan kita.
           </p>
 
           {/* Wax Seal Button (Interactive Trigger) */}
@@ -95,28 +70,28 @@ export default function IntroScreen() {
             <button
               type="button"
               className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#FDA4AF] via-[#F43F5E] to-[#881337] p-[2.5px] shadow-2xl shadow-rose-950/70 transition-transform duration-300 group-hover:scale-105 active:scale-95 flex items-center justify-center"
-              title="Klik untuk membuka segel dan memutar lagu"
+              title="Klik untuk membuka surat dan memutar lagu"
             >
               <div className="w-full h-full rounded-full bg-[#1A0A14] flex flex-col items-center justify-center border border-rose-400/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-rose-500/30 to-transparent opacity-70" />
                 <Heart className="w-8 h-8 text-rose-400 fill-rose-500/50 mb-1 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-[10px] font-serif tracking-widest text-rose-200 uppercase font-bold">
-                  Buka Segel
+                  Buka Surat
                 </span>
               </div>
             </button>
           </div>
 
           {/* Audio Track Tag & Hint */}
-          <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-luxury-card border border-luxury-gold/20 text-xs text-luxury-gold/90 shadow-inner">
-            <Music className="w-3.5 h-3.5 text-luxury-gold animate-bounce" />
-            <span>Soundtrack: <strong className="font-semibold text-luxury-ivory">Dash Uciha — Merindukanmu</strong></span>
-            <Volume2 className="w-3.5 h-3.5 text-luxury-gold/70 ml-1" />
+          <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-luxury-card border border-rose-400/25 text-xs text-rose-200 shadow-inner">
+            <Music className="w-3.5 h-3.5 text-rose-400 animate-bounce" />
+            <span>Lagu: <strong className="font-semibold text-white">Dash Uciha — Merindukanmu</strong></span>
+            <Volume2 className="w-3.5 h-3.5 text-rose-400/70 ml-1" />
           </div>
 
           {/* Footer Note */}
-          <span className="text-[11px] text-luxury-muted/70 mt-6 tracking-wider">
-            Audio otomatis mengalun saat segel disentuh • 24 FPS Cinema
+          <span className="text-[11px] text-luxury-muted/70 mt-6 tracking-wide font-light">
+            Nyalakan volume suara untuk mendengarkan lagunya ya
           </span>
         </motion.div>
       </motion.div>

@@ -44,9 +44,9 @@ export default function WishCapsuleSection() {
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="text-center max-w-2xl mx-auto mb-16"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-luxury-card border border-luxury-gold/25 text-luxury-gold text-xs tracking-[0.25em] uppercase mb-4 shadow-lg">
-          <Star className="w-3.5 h-3.5" />
-          <span>VOWS & BLESSINGS • KAPSUL HARAPAN</span>
+        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-luxury-card border border-rose-500/25 text-rose-300 text-xs tracking-widest uppercase mb-4 shadow-lg">
+          <Star className="w-3.5 h-3.5 text-rose-400" />
+          <span>Doa & Janji Tulus</span>
         </div>
         <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-4">
           Enam Janji Suci & <span className="text-gold-gradient italic font-normal">Doa Terbaik</span>

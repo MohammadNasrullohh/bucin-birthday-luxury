@@ -99,13 +99,13 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
       {/* TOP LETTERBOX BAR: Film Header */}
       <div className="relative z-40 h-16 sm:h-20 bg-black/90 px-6 sm:px-12 flex items-center justify-between border-b border-white/10">
         <div className="flex items-center gap-3">
-          <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping" />
-          <span className="font-mono text-xs sm:text-sm tracking-widest text-luxury-gold uppercase font-bold">
-            CINEMA PRESENTATION • 24 FPS
+          <Heart className="w-4 h-4 text-rose-400 fill-rose-500" />
+          <span className="text-xs sm:text-sm tracking-widest text-rose-300 uppercase font-bold">
+            Kisah Kasih Kita
           </span>
           <span className="text-white/20 hidden sm:inline">|</span>
           <span className="font-serif italic text-xs sm:text-sm text-white/80 hidden sm:inline">
-            "A Love Story for {data.partnerName}"
+            "Kado Terindah untuk {data.partnerName}"
           </span>
         </div>
 
@@ -113,9 +113,9 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
         <button
           type="button"
           onClick={onClose}
-          className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 hover:bg-luxury-gold hover:text-black border border-white/20 text-xs font-mono tracking-wider uppercase transition-all"
+          className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 hover:bg-rose-500 hover:text-white border border-white/20 text-xs tracking-wider uppercase transition-all"
         >
-          <span>Keluar Sinema (ESC)</span>
+          <span>Tutup</span>
           <X className="w-4 h-4" />
         </button>
       </div>
@@ -133,8 +133,8 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
                 {countdown}
               </span>
             </div>
-            <p className="font-mono text-xs text-luxury-gold/70 tracking-widest uppercase mt-6">
-              MEMULAI PROYEKSI FILM CINTA...
+            <p className="text-xs text-rose-300 tracking-widest uppercase mt-6 font-medium">
+              Memutar Kenangan Manis Kita...
             </p>
           </div>
         )}
@@ -162,8 +162,8 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
             
             {/* Title Card */}
             <div className="absolute top-8 left-8 sm:left-12 max-w-md">
-              <span className="text-[10px] font-mono tracking-widest text-luxury-gold uppercase px-2 py-0.5 rounded bg-black/60 border border-luxury-gold/30">
-                BABAK I: PERTEMUAN PERTAMA
+              <span className="text-xs tracking-wider text-rose-300 uppercase px-2.5 py-1 rounded bg-black/70 border border-rose-400/30">
+                Bagian I: Pertemuan Pertama
               </span>
               <h4 className="font-serif text-2xl sm:text-4xl font-bold text-white mt-2">
                 {photo1.title}
@@ -237,8 +237,8 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
             
             <div className="absolute top-8 left-8 sm:left-12 max-w-md">
-              <span className="text-[10px] font-mono tracking-widest text-luxury-gold uppercase px-2 py-0.5 rounded bg-black/60 border border-luxury-gold/30">
-                BABAK II: JANJI MASA DEPAN
+              <span className="text-xs tracking-wider text-rose-300 uppercase px-2.5 py-1 rounded bg-black/70 border border-rose-400/30">
+                Bagian II: Janji Hari Esok
               </span>
               <h4 className="font-serif text-2xl sm:text-4xl font-bold text-white mt-2">
                 {photo2.title}
@@ -347,19 +347,19 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
         {/* Scene Jump Pills (Babak 1, 2, 3, 4, 5) */}
         <div className="flex items-center gap-2 overflow-x-auto max-w-full text-xs">
           {[
-            { label: 'Babak I (Foto 1)', time: 13, sceneId: 1 },
-            { label: 'Babak II (Reff)', time: 41, sceneId: 2 },
-            { label: 'Babak III (Foto 2)', time: 69, sceneId: 3 },
-            { label: 'Babak IV (Tiup Lilin)', time: 120, sceneId: 4 },
-            { label: 'Ending (Surat)', time: 155, sceneId: 5 },
+            { label: 'Foto Pertama', time: 13, sceneId: 1 },
+            { label: 'Lirik Reff', time: 41, sceneId: 2 },
+            { label: 'Foto Kedua', time: 69, sceneId: 3 },
+            { label: 'Tiup Lilin', time: 120, sceneId: 4 },
+            { label: 'Surat Kasih', time: 155, sceneId: 5 },
           ].map((sc) => (
             <button
               key={sc.sceneId}
               type="button"
               onClick={() => jumpToScene(sc.time)}
-              className={`px-3 py-1.5 rounded-full font-mono text-[11px] transition-all ${
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                 scene === sc.sceneId
-                  ? 'bg-luxury-gold text-black font-bold shadow'
+                  ? 'bg-rose-500 text-white font-bold shadow'
                   : 'bg-white/10 text-white/70 hover:bg-white/20'
               }`}
             >

@@ -4,13 +4,10 @@ import { useCelebration } from '../context/CelebrationContext';
 import { 
   Sparkles, 
   Maximize2, 
-  Camera, 
   Upload, 
   Heart, 
   Calendar, 
-  MapPin, 
-  Film,
-  Layers
+  MapPin 
 } from 'lucide-react';
 
 export default function DualPhotoShowcase() {
@@ -40,10 +37,10 @@ export default function DualPhotoShowcase() {
   const photo2 = photos[1];
 
   return (
-    <section id="photos" className="relative py-28 px-4 max-w-7xl mx-auto">
+    <section id="photos" className="relative py-24 px-4 max-w-7xl mx-auto">
       {/* Background glow highlights */}
-      <div className="absolute top-1/2 left-10 w-[500px] h-[500px] bg-luxury-gold/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-luxury-rose/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-10 w-[500px] h-[500px] bg-rose-600/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-red-600/5 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Section Header */}
       <motion.div
@@ -53,9 +50,9 @@ export default function DualPhotoShowcase() {
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="text-center max-w-3xl mx-auto mb-16"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-luxury-card border border-luxury-gold/25 text-luxury-gold text-xs tracking-[0.25em] uppercase mb-4 shadow-lg">
-          <Film className="w-3.5 h-3.5" />
-          <span>DUAL CINEMATIC FRAMES • 2 POTRET KITA</span>
+        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-luxury-card border border-rose-500/25 text-rose-300 text-xs tracking-widest uppercase mb-4 shadow-lg">
+          <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-500/50" />
+          <span>Dua Potret Senyummu</span>
         </div>
         <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
           Dua Momen, <span className="text-gold-gradient italic font-normal">Satu Semesta Abadi</span>
@@ -65,14 +62,14 @@ export default function DualPhotoShowcase() {
         </p>
 
         {/* View Switcher Pill */}
-        <div className="inline-flex items-center p-1.5 rounded-full bg-luxury-surface/80 border border-luxury-gold/25 mt-6 text-xs backdrop-blur-md">
+        <div className="inline-flex items-center p-1.5 rounded-full bg-luxury-surface/80 border border-rose-500/25 mt-6 text-xs backdrop-blur-md">
           <button
             type="button"
             onClick={() => setViewMode('side-by-side')}
             className={`px-5 py-2 rounded-full transition-all duration-300 ${
               viewMode === 'side-by-side'
-                ? 'bg-luxury-gold text-luxury-dark font-semibold shadow-lg shadow-amber-950/40'
-                : 'text-luxury-muted hover:text-luxury-ivory'
+                ? 'bg-rose-500 text-white font-semibold shadow-lg shadow-rose-950/40'
+                : 'text-luxury-muted hover:text-white'
             }`}
           >
             Dua Bingkai Berdampingan
@@ -82,8 +79,8 @@ export default function DualPhotoShowcase() {
             onClick={() => setViewMode('single-focus')}
             className={`px-5 py-2 rounded-full transition-all duration-300 ${
               viewMode === 'single-focus'
-                ? 'bg-luxury-gold text-luxury-dark font-semibold shadow-lg shadow-amber-950/40'
-                : 'text-luxury-muted hover:text-luxury-ivory'
+                ? 'bg-rose-500 text-white font-semibold shadow-lg shadow-rose-950/40'
+                : 'text-luxury-muted hover:text-white'
             }`}
           >
             Sorotan Bergantian
@@ -173,8 +170,8 @@ export default function DualPhotoShowcase() {
               onClick={() => setFocusedIndex(0)}
               className={`px-6 py-2.5 rounded-full border text-xs font-serif tracking-widest uppercase transition-all duration-300 ${
                 focusedIndex === 0
-                  ? 'bg-luxury-gold text-luxury-dark border-luxury-gold font-bold shadow-xl shadow-amber-950/50 scale-105'
-                  : 'bg-luxury-surface/80 text-luxury-muted border-luxury-gold/20 hover:text-luxury-ivory'
+                  ? 'bg-rose-500 text-white border-rose-500 font-bold shadow-xl shadow-rose-950/50 scale-105'
+                  : 'bg-luxury-surface/80 text-luxury-muted border-rose-400/20 hover:text-white'
               }`}
             >
               Potret I: Pertemuan Pertama
@@ -184,8 +181,8 @@ export default function DualPhotoShowcase() {
               onClick={() => setFocusedIndex(1)}
               className={`px-6 py-2.5 rounded-full border text-xs font-serif tracking-widest uppercase transition-all duration-300 ${
                 focusedIndex === 1
-                  ? 'bg-luxury-gold text-luxury-dark border-luxury-gold font-bold shadow-xl shadow-amber-950/50 scale-105'
-                  : 'bg-luxury-surface/80 text-luxury-muted border-luxury-gold/20 hover:text-luxury-ivory'
+                  ? 'bg-rose-500 text-white border-rose-500 font-bold shadow-xl shadow-rose-950/50 scale-105'
+                  : 'bg-luxury-surface/80 text-luxury-muted border-rose-400/20 hover:text-white'
               }`}
             >
               Potret II: Janji Masa Depan
@@ -201,8 +198,8 @@ export default function DualPhotoShowcase() {
         viewport={{ once: true }}
         className="mt-14 text-center"
       >
-        <p className="text-xs text-luxury-muted/80 max-w-md mx-auto flex items-center justify-center gap-2 font-light">
-          <Upload className="w-3.5 h-3.5 text-luxury-gold" />
+        <p className="text-xs text-rose-300/80 max-w-md mx-auto flex items-center justify-center gap-2 font-light">
+          <Upload className="w-3.5 h-3.5 text-rose-400" />
           <span>Kamu bisa langsung menekan tombol <strong>"Ganti Foto Ini"</strong> pada setiap kartu untuk memasukkan 2 foto milikmu sendiri.</span>
         </p>
       </motion.div>
@@ -210,7 +207,7 @@ export default function DualPhotoShowcase() {
   );
 }
 
-// Subcomponent: Individual Luxury Photo Card with 3D tilt & cinematic film strip borders
+// Subcomponent: Individual Luxury Photo Card with 3D tilt & sweet loving accents
 function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
   const cardRef = useRef(null);
   const [transformStyle, setTransformStyle] = useState('');
@@ -240,37 +237,28 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform: transformStyle }}
-      className={`relative group rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#181625] via-[#12111D] to-[#0A0910] border border-luxury-gold/25 shadow-2xl transition-all duration-300 ${rotation}`}
+      className={`relative group rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#1C0B18] via-[#140811] to-[#0A0409] border border-rose-500/25 shadow-2xl transition-all duration-300 ${rotation}`}
     >
-      {/* Antique Brass Clip Ornament */}
-      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-4 py-1 rounded-full bg-gradient-to-r from-[#FFE4E8] via-[#FB7185] to-[#BE123C] shadow-lg text-[9px] font-mono tracking-widest text-[#09080C] font-bold uppercase">
-        <Film className="w-2.5 h-2.5" />
-        <span>CINEMA MEMOIR #{index + 1}</span>
+      {/* Top Rose Badge */}
+      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-4 py-1 rounded-full bg-gradient-to-r from-[#FFE4E8] via-[#FB7185] to-[#BE123C] shadow-lg text-[9px] font-medium tracking-widest text-white uppercase">
+        <Heart className="w-2.5 h-2.5 fill-current" />
+        <span>Kenangan #{index + 1}</span>
       </div>
 
-      {/* Top Metadata Row with Film Perforation Style */}
-      <div className="flex items-center justify-between text-xs text-luxury-muted mb-4 pt-1">
-        <div className="flex items-center gap-2 text-luxury-gold/90 font-mono tracking-widest text-[11px]">
-          <span className="w-1.5 h-1.5 rounded-full bg-luxury-gold animate-ping" />
-          <span>{photo.tag || `ACT 0${index + 1}`}</span>
+      {/* Top Metadata Row */}
+      <div className="flex items-center justify-between text-xs text-rose-300/80 mb-4 pt-1">
+        <div className="flex items-center gap-2 text-rose-300 font-medium tracking-wide text-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-ping" />
+          <span>{index === 0 ? 'Awal Cerita' : 'Hari Ini & Seterusnya'}</span>
         </div>
-        <div className="flex items-center gap-1.5 text-[11px] font-mono text-luxury-muted">
-          <Calendar className="w-3 h-3 text-luxury-gold/70" />
+        <div className="flex items-center gap-1.5 text-xs text-rose-300/80">
+          <Calendar className="w-3.5 h-3.5 text-rose-400" />
           <span>{photo.date}</span>
         </div>
       </div>
 
-      {/* Image Container with Film Grain, Dark Vignette & Zoom */}
-      <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-black/80 border border-luxury-gold/20 mb-6 shadow-2xl group/img">
-        
-        {/* Film edge perforations emulation */}
-        <div className="absolute top-2 left-2 z-10 font-mono text-[8px] text-white/40 tracking-widest uppercase">
-          KODAK 500T • 35MM
-        </div>
-        <div className="absolute top-2 right-2 z-10 font-mono text-[8px] text-white/40 tracking-widest uppercase">
-          FRAME 0{index + 1}
-        </div>
-
+      {/* Image Container with Dark Vignette & Zoom */}
+      <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-black/80 border border-rose-500/20 mb-6 shadow-2xl group/img">
         <img
           src={photo.url}
           alt={photo.title}
@@ -285,7 +273,7 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
           <button
             type="button"
             onClick={onZoom}
-            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all shadow-xl hover:scale-110 active:scale-95"
+            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-rose-500 hover:text-white transition-all shadow-xl hover:scale-110 active:scale-95"
             title="Lihat Detail & Perbesar"
           >
             <Maximize2 className="w-4 h-4" />
@@ -294,11 +282,11 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
 
         {/* Bottom Tag inside Image */}
         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white/90 text-xs">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 font-mono text-[10px]">
-            <MapPin className="w-3 h-3 text-luxury-gold" />
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px]">
+            <MapPin className="w-3 h-3 text-rose-400" />
             <span>{photo.location}</span>
           </div>
-          <span className="px-3 py-1 rounded-full bg-luxury-gold/30 backdrop-blur-md font-serif italic text-xs text-luxury-gold font-medium border border-luxury-gold/30">
+          <span className="px-3 py-1 rounded-full bg-rose-500/30 backdrop-blur-md font-serif italic text-xs text-rose-200 font-medium border border-rose-400/30">
             {photo.highlightWord}
           </span>
         </div>
@@ -306,10 +294,10 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
 
       {/* Editorial Title & Subtitle */}
       <div className="mb-4">
-        <p className="text-xs uppercase tracking-[0.25em] font-serif text-luxury-gold/80 mb-1">
+        <p className="text-xs uppercase tracking-widest font-serif text-rose-300 mb-1">
           {photo.subtitle}
         </p>
-        <h3 className="font-serif text-2xl font-bold text-luxury-ivory tracking-tight group-hover:text-gold-gradient transition-colors">
+        <h3 className="font-serif text-2xl font-bold text-white tracking-tight group-hover:text-gold-gradient transition-colors">
           {photo.title}
         </h3>
       </div>
@@ -320,17 +308,17 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
       </p>
 
       {/* Bottom Footer Info & Quick Upload Button */}
-      <div className="pt-4 border-t border-luxury-gold/15 flex items-center justify-between">
-        <span className="text-[11px] font-mono text-luxury-muted/70 flex items-center gap-1.5">
-          <Camera className="w-3 h-3 text-luxury-gold/70" />
-          <span>{photo.cameraInfo}</span>
+      <div className="pt-4 border-t border-rose-500/15 flex items-center justify-between">
+        <span className="text-xs text-rose-300/80 flex items-center gap-1.5 font-light">
+          <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-500/50" />
+          <span>Tersimpan indah di hati</span>
         </span>
 
         {/* Replace Photo Button */}
         <button
           type="button"
           onClick={onReplace}
-          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-luxury-gold/10 hover:bg-luxury-gold/25 border border-luxury-gold/30 text-luxury-gold text-xs font-medium transition-all hover:scale-105 active:scale-95"
+          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-500/15 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 text-xs font-medium transition-all hover:scale-105 active:scale-95"
           title="Unggah foto Anda sendiri untuk posisi ini"
         >
           <Upload className="w-3 h-3" />

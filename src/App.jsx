@@ -14,7 +14,6 @@ import CustomizerModal from './components/CustomizerModal';
 import PhotoLightboxModal from './components/PhotoLightboxModal';
 import CinematicParticles from './components/CinematicParticles';
 import CursorGlow from './components/CursorGlow';
-import CinematicFrame from './components/CinematicFrame';
 import CinematicMovieMode from './components/CinematicMovieMode';
 import AutoScrollDirector from './components/AutoScrollDirector';
 
@@ -53,9 +52,6 @@ function MainApp() {
 
       {/* Smooth Cursor Glow Follower */}
       <CursorGlow />
-
-      {/* Subtle Cinematic Status Frame (24 FPS, REC timecode) */}
-      <CinematicFrame />
 
       {/* Intro Curtain Screen */}
       <IntroScreen />

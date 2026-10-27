@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCelebration } from '../context/CelebrationContext';
-import { Play, Pause, Compass, ArrowDown, ChevronDown } from 'lucide-react';
+import { Play, Pause, Heart } from 'lucide-react';
 
 export default function AutoScrollDirector() {
   const { 
@@ -11,12 +11,11 @@ export default function AutoScrollDirector() {
     isMovieModeOpen 
   } = useCelebration();
 
-  const [scrollSpeed, setScrollSpeed] = useState(0.95); // Smooth cinematic pace (px/frame)
   const [showPill, setShowPill] = useState(false);
   const [userPaused, setUserPaused] = useState(false);
   const rafRef = useRef(null);
 
-  // Automatically start auto-glide 3.2 seconds after envelope is unsealed
+  // Automatically start slow romantic scrolling down 3.2 seconds after letter is opened
   useEffect(() => {
     if (hasStarted && !userPaused && !isMovieModeOpen) {
       const startTimer = setTimeout(() => {
@@ -28,7 +27,7 @@ export default function AutoScrollDirector() {
     }
   }, [hasStarted, userPaused, isMovieModeOpen, setIsAutoScrollActive]);
 
-  // Continuous buttery smooth auto-scroll loop
+  // Continuous buttery smooth auto-scroll loop (speed: 0.95px per frame)
   useEffect(() => {
     if (!isAutoScrollActive || isMovieModeOpen) {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -36,8 +35,7 @@ export default function AutoScrollDirector() {
     }
 
     const step = () => {
-      // Scroll down by speed amount
-      window.scrollBy(0, scrollSpeed);
+      window.scrollBy(0, 0.95);
 
       // Check if reached bottom of the page
       const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 20;
@@ -54,22 +52,7 @@ export default function AutoScrollDirector() {
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [isAutoScrollActive, scrollSpeed, isMovieModeOpen, setIsAutoScrollActive]);
-
-  // If user presses spacebar or escape, toggle pause
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-        e.preventDefault();
-        setIsAutoScrollActive((prev) => {
-          setUserPaused(prev);
-          return !prev;
-        });
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [setIsAutoScrollActive]);
+  }, [isAutoScrollActive, isMovieModeOpen, setIsAutoScrollActive]);
 
   const toggleScroll = () => {
     if (isAutoScrollActive) {
@@ -81,7 +64,6 @@ export default function AutoScrollDirector() {
     }
   };
 
-  // Only show when the experience has started and not inside Fullscreen Cinema
   if (!hasStarted || isMovieModeOpen || !showPill) return null;
 
   return (
@@ -93,7 +75,7 @@ export default function AutoScrollDirector() {
         transition={{ duration: 0.5 }}
         className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4"
       >
-        <div className="pointer-events-auto flex items-center gap-2 sm:gap-3 px-4 py-2 rounded-full bg-[#180814]/85 border border-rose-400/35 shadow-2xl shadow-black/80 backdrop-blur-xl text-xs">
+        <div className="pointer-events-auto flex items-center gap-3 px-4 py-2 rounded-full bg-[#1A0A16]/90 border border-rose-400/35 shadow-2xl shadow-black/90 backdrop-blur-xl text-xs">
           
           {/* Animated Status Indicator */}
           <div className="flex items-center gap-2">
@@ -102,19 +84,19 @@ export default function AutoScrollDirector() {
                 isAutoScrollActive ? 'bg-rose-500 animate-ping' : 'bg-rose-400/50'
               }`}
             />
-            <span className="font-serif italic text-rose-200 hidden sm:inline">
-              {isAutoScrollActive ? 'Sinema Berjalan Otomatis' : 'Berjalan Dijeda'}
+            <span className="font-serif italic text-rose-200">
+              {isAutoScrollActive ? 'Menyusuri Kenangan Indah...' : 'Gulir Dijeda'}
             </span>
           </div>
 
-          <span className="text-rose-400/30 hidden sm:inline">|</span>
+          <span className="text-rose-400/30">|</span>
 
           {/* Pause / Resume Button */}
           <button
             type="button"
             onClick={toggleScroll}
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/20 hover:bg-rose-500/35 border border-rose-400/40 text-rose-200 font-medium transition-all hover:scale-105 active:scale-95"
-            title={isAutoScrollActive ? 'Jeda gulir otomatis' : 'Lanjutkan gulir otomatis'}
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/25 hover:bg-rose-500/40 border border-rose-400/40 text-white font-medium transition-all hover:scale-105 active:scale-95"
+            title={isAutoScrollActive ? 'Jeda perjalanan' : 'Lanjutkan perjalanan'}
           >
             {isAutoScrollActive ? (
               <>
@@ -124,25 +106,10 @@ export default function AutoScrollDirector() {
             ) : (
               <>
                 <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
-                <span>Lanjutkan</span>
+                <span>Lanjut</span>
               </>
             )}
           </button>
-
-          {/* Speed Toggle */}
-          <button
-            type="button"
-            onClick={() => setScrollSpeed((prev) => (prev === 0.95 ? 1.6 : prev === 1.6 ? 0.6 : 0.95))}
-            className="px-2.5 py-1 rounded-full bg-luxury-surface/80 border border-rose-400/25 text-[11px] font-mono text-rose-300 hover:text-white transition-colors"
-            title="Ubah kecepatan gulir"
-          >
-            {scrollSpeed === 0.95 ? '1.0x' : scrollSpeed === 1.6 ? '1.8x' : '0.6x'}
-          </button>
-
-          {/* Hint */}
-          <span className="text-[10px] font-mono text-rose-300/60 hidden md:inline">
-            (Spasi: jeda)
-          </span>
         </div>
       </motion.div>
     </AnimatePresence>

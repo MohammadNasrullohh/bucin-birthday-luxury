@@ -43,14 +43,12 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-glass border border-luxury-gold/25 mb-6 shadow-xl shadow-black/40"
+        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-glass border border-rose-400/25 mb-6 shadow-xl shadow-black/40"
       >
-        <Sparkles className="w-3.5 h-3.5 text-luxury-gold" />
-        <span className="text-xs uppercase tracking-[0.25em] font-medium text-luxury-gold">
-          CHAPTER {data.age} • CINEMATIC CELEBRATION
+        <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+        <span className="text-xs uppercase tracking-widest font-medium text-rose-300">
+          Untukmu yang Tersayang • {data.age} Tahun Penuh Makna
         </span>
-        <span className="text-luxury-gold/40">|</span>
-        <span className="text-[11px] font-mono text-luxury-muted">24 FPS</span>
       </motion.div>
 
       {/* Main Luxury Serif Heading with smooth blur reveal */}
@@ -139,16 +137,15 @@ export default function HeroSection() {
           onClick={() => setIsMovieModeOpen(true)}
           className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-bold text-xs tracking-widest uppercase shadow-2xl shadow-rose-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping" />
-          <Film className="w-4 h-4 fill-current" />
-          <span>Putar Film Sinematik Berjalan (Full Cinema)</span>
+          <Heart className="w-4 h-4 fill-current" />
+          <span>Putar Cerita Manis Kita</span>
         </button>
 
         <a
           href="#photos"
-          className="px-6 py-3.5 rounded-full bg-luxury-surface/90 border border-luxury-gold/30 text-luxury-gold font-medium text-xs tracking-widest uppercase hover:bg-luxury-gold/15 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+          className="px-6 py-3.5 rounded-full bg-luxury-surface/90 border border-rose-400/30 text-rose-200 font-medium text-xs tracking-widest uppercase hover:bg-rose-500/15 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
         >
-          <Heart className="w-4 h-4 fill-current" />
+          <Sparkles className="w-4 h-4 text-rose-400" />
           <span>Lihat Dua Foto Kita</span>
         </a>
       </motion.div>
@@ -158,10 +155,10 @@ export default function HeroSection() {
         href="#photos"
         animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-        className="mt-16 text-luxury-gold/60 hover:text-luxury-gold flex flex-col items-center gap-1.5 transition-colors group"
+        className="mt-16 text-rose-300/70 hover:text-rose-200 flex flex-col items-center gap-1.5 transition-colors group"
       >
-        <span className="text-[10px] tracking-[0.3em] uppercase font-mono font-light">Gulir Sinematik</span>
-        <ChevronDown className="w-4 h-4 text-luxury-gold group-hover:translate-y-1 transition-transform" />
+        <span className="text-[10px] tracking-widest uppercase font-light">Menyusuri Kenangan</span>
+        <ChevronDown className="w-4 h-4 text-rose-400 group-hover:translate-y-1 transition-transform" />
       </motion.a>
     </section>
   );

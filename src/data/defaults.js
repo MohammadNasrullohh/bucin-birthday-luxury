@@ -1,35 +1,35 @@
 export const initialCelebrationData = {
   partnerName: "Adinda Putri",
   partnerNickname: "Sayang",
-  yourName: "Aku yang Selalu Mengagumimu",
+  yourName: "Aku yang Selalu Mencintaimu",
   age: 23,
   birthDate: "2003-10-27",
-  heroSubtitle: "Sebuah arsip digital persembahan cinta untuk merayakan kehadiran jiwa paling indah di dunia ini.",
+  heroSubtitle: "Sebuah persembahan cinta tulus untuk merayakan hari kelahiran jiwa paling indah di hidupku.",
   
   // The 2 photos centerpiece
   photos: [
     {
       id: "photo-1",
       url: "/photos/photo1.jpg",
-      title: "Babak I — Awal Dimana Waktu Berhenti",
-      subtitle: "Saat Pertama Mataku Menemukan Rumah",
-      tag: "THE ENCOUNTER",
-      date: "Kala Itu di Bawah Senja",
+      title: "Momen Pertama — Saat Waktu Terasa Berhenti",
+      subtitle: "Saat Pertama Mataku Menatap Senyummu",
+      tag: "Awal Cerita",
+      date: "Pertemuan Manis Kita",
       location: "Tempat Pertama Kita Bertemu",
-      caption: "Di antara miliaran tatap di dunia ini, hanya milikmu yang membuat waktu seketika berhenti. Senyum yang pertama kali kulihat dan selamanya kuingat.",
-      cameraInfo: "Portra 400 • 35mm f/1.4",
+      caption: "Di antara miliaran orang di dunia ini, hanya senyummu yang membuat hatiku seketika merasa pulang dan tenang. Senyum yang selalu kurindukan.",
+      cameraInfo: "Tersimpan Indah di Hati",
       highlightWord: "Menawan"
     },
     {
       id: "photo-2",
       url: "/photos/photo2.jpg",
-      title: "Babak II — Selamanya di Setiap Hari Esok",
-      subtitle: "Cahaya yang Menerangi Sisa Hidupku",
-      tag: "THE PROMISE",
-      date: "Kini, Hari Ini & Selamanya",
+      title: "Masa Depan — Selamanya Bersamamu",
+      subtitle: "Cahaya di Setiap Hariku",
+      tag: "Janji Suci",
+      date: "Hari Ini & Selamanya",
       location: "Di Sudut Bahagia Kita",
-      caption: "Bukan hanya tentang bahagia di saat langit cerah, tapi tentang tangan yang tak pernah melepas saat hujan badai datang. Terima kasih telah memilihku.",
-      cameraInfo: "Ektar 100 • 50mm f/1.2",
+      caption: "Bukan hanya tentang bahagia di saat terang, tapi tentang tangan yang tak pernah melepas saat badai datang. Terima kasih telah memilihku.",
+      cameraInfo: "Selamanya di Jiwaku",
       highlightWord: "Abadi"
     }
   ],
@@ -38,7 +38,7 @@ export const initialCelebrationData = {
   music: {
     title: "Merindukanmu",
     artist: "Dash Uciha",
-    album: "Official Master Audio",
+    album: "Lagu Kita",
     duration: 262,
     audioSrc: "/audio/dash-uciha-merindukanmu.mp3",
     lyrics: [
@@ -78,17 +78,17 @@ export const initialCelebrationData = {
 
   // The Love Letter
   letter: {
-    heading: "Sebuah Warkat untuk Jiwa yang Paling Kucintai",
-    subheading: "Tertulis dengan sepenuh tulus, di bawah langit yang berbahagia menyambut kelahiranmu.",
+    heading: "Sebuah Surat Cinta untuk Jiwa yang Paling Kucintai",
+    subheading: "Ditulis dengan sepenuh tulus di hari yang istimewa ini.",
     paragraphs: [
       "Selamat bertambah usia, manusia paling berharga di semestaku. Jika waktu dapat kubekukan, aku ingin menghentikannya di setiap detik saat aku berada di sampingmu, mendengarkan tawamu yang renyah dan mengamati matamu yang selalu berkilau indah.",
-      "Banyak orang mencari keajaiban di ujung bumi, tapi bagiku keajaiban itu duduk tepat di hadapanku. Dua foto kita di atas bukan sekadar jepretan piksel dan cahaya; itu adalah bukti otentik bagaimana senyummu mampu mengubah hari-hari paling kelabu menjadi kanvas penuh warna hangat.",
-      "Lagu 'Merindukanmu' yang sedang berputar ini selalu mengingatkanku pada satu hal: bahwa hidupku sebelum mengenalmu hanyalah bait-bait yang sepi. Kau datang, dan tiba-tiba seluruh dunia memiliki melodi yang begitu merdu.",
-      "Di babak usiamu yang baru ini, aku tidak berjanji bahwa jalan kita akan selalu mulus tanpa kerikil. Tapi aku berjanji satu hal: tanganku tidak akan pernah lepas dari genggamanmu. Aku akan menjadi orang pertama yang merayakan tawamu, dan pelukan pertama yang menyambut rapuhmu.",
-      "Terima kasih telah lahir, terima kasih telah bertahan, dan terima kasih telah memilihku untuk menjadi saksi perjalanan indahmu. Selamat ulang tahun, cintaku."
+      "Dua foto kita di atas menyimpan begitu banyak cerita; bagaimana senyummu selalu mampu mengubah hari-hari paling lelah menjadi hangat dan penuh tawa.",
+      "Lagu 'Merindukanmu' yang sedang berputar ini selalu mengingatkanku pada satu hal: bahwa hidupku sebelum mengenalmu hanyalah hari-hari yang sepi. Kau datang, dan tiba-tiba seluruh dunia memiliki arti yang begitu indah.",
+      "Di usiamu yang baru ini, aku tidak berjanji bahwa jalan kita akan selalu mulus tanpa rintangan. Tapi aku berjanji satu hal: tanganku tidak akan pernah lepas dari genggamanmu. Aku akan menjadi orang pertama yang merayakan bahagiamu, dan pelukan pertama yang menyambut rapuhmu.",
+      "Terima kasih telah lahir, terima kasih telah bertahan, dan terima kasih telah memilihku untuk menemani langkahmu. Selamat ulang tahun, cintaku."
     ],
     closing: "Milikmu seutuhnya,",
-    signature: "Teman Seumur Hidupmu"
+    signature: "Teman Hidupmu"
   },
 
   // 6 Golden Wishes
@@ -96,51 +96,51 @@ export const initialCelebrationData = {
     {
       id: 1,
       title: "Tempat Pulang Paling Nyaman",
-      desc: "Semoga pundakku selalu menjadi tempat bersandar ternyaman saat dunia luar terasa terlalu bising dan melelahkan bagimu.",
-      tag: "Home",
+      desc: "Semoga pundakku selalu menjadi tempat bersandar ternyaman saat dunia luar terasa terlalu melelahkan bagimu.",
+      tag: "Rumah",
       accent: "from-amber-500/20 to-yellow-500/10"
     },
     {
       id: 2,
       title: "Kesehatan & Kedamaian Jiwa",
-      desc: "Semoga raga senantiasa bugar, tidurmu nyenyak tanpa rasa cemas, dan hatimu senantiasa dipeluk oleh ketenangan yang dalam.",
-      tag: "Peace",
+      desc: "Semoga ragamu senantiasa sehat, tidurmu nyenyak tanpa rasa cemas, dan hatimu senantiasa dipeluk ketenangan.",
+      tag: "Damai",
       accent: "from-rose-500/20 to-pink-500/10"
     },
     {
       id: 3,
       title: "Mimpi yang Menemukan Jalan",
-      desc: "Semoga setiap doa yang kau bisikkan dalam keheningan malam dijawab semesta dengan cara yang paling manis dan membanggakan.",
-      tag: "Dreams",
+      desc: "Semoga setiap impian dan doa baik yang kau panjatkan dijawab semesta dengan cara yang paling membahagiakan.",
+      tag: "Mimpi",
       accent: "from-amber-400/20 to-orange-500/10"
     },
     {
       id: 4,
       title: "Langkah yang Selalu Beriringan",
-      desc: "Semoga musim berganti ribuan kali, namun langkah kita tetap selaras menuju hari depan yang telah kita rangkai bersama.",
-      tag: "Together",
+      desc: "Semoga musim berganti ribuan kali, namun genggaman tangan kita tetap erat menuju hari esok.",
+      tag: "Bersama",
       accent: "from-purple-500/20 to-pink-500/10"
     },
     {
       id: 5,
       title: "Limpahan Tawa yang Hangat",
-      desc: "Semoga matamu tidak pernah kehabisan alasan untuk tersenyum, dan tawamu tetap menjadi melodi terfavorit di telingaku.",
-      tag: "Joy",
+      desc: "Semoga harimu tidak pernah kehabisan alasan untuk tersenyum, dan tawamu tetap menjadi melodi terfavoritku.",
+      tag: "Bahagia",
       accent: "from-yellow-500/20 to-amber-600/10"
     },
     {
       id: 6,
       title: "Cinta yang Tumbuh Setiap Hari",
-      desc: "Semoga rasa kita tak pernah tergerus zaman. Seperti anggur tua, cinta ini akan semakin pekat, matang, dan berharga seiring usia.",
-      tag: "Eternity",
+      desc: "Semoga rasa sayang kita tak pernah pudar, semakin hangat dan dewasa seiring berjalannya waktu.",
+      tag: "Selamanya",
       accent: "from-red-500/20 to-rose-600/10"
     }
   ],
 
-  // Interactive Quiz / Sweet Facts
+  // Interactive Sweet Q&A
   secrets: [
-    { q: "Hal kecil darimu yang paling membuatku jatuh cinta?", a: "Caramu tertawa sambil menutupi wajah saat tersipu malu." },
+    { q: "Hal kecil darimu yang paling membuatku jatuh cinta?", a: "Caramu tersenyum manis sambil menatapku saat sedang bercerita." },
     { q: "Lagu yang selalu mengingatkanku padamu?", a: "Dash Uciha - Merindukanmu, karena setiap liriknya adalah rasaku." },
-    { q: "Harapan terbesarku bersamamu?", a: "Menua bersama hingga rambut memutih, tetap bergandengan tangan menatap senja." }
+    { q: "Harapan terbesarku bersamamu?", a: "Menua bersama, tetap bergandengan tangan menatap senja di setiap hari esok." }
   ]
 };
