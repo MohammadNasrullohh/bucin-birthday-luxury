@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useCelebration } from '../context/CelebrationContext';
-import { Heart, ChevronUp, Music, QrCode } from 'lucide-react';
-import QrCodeModal from './QrCodeModal';
+import { Heart, ChevronUp, Music } from 'lucide-react';
 
 export default function Footer() {
   const { data } = useCelebration();
-  const [isQrOpen, setIsQrOpen] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -36,35 +34,21 @@ export default function Footer() {
           <span>Lagu Kita: Dash Uciha — Merindukanmu</span>
         </div>
 
-        {/* Action Buttons: QR Barcode & Scroll To Top */}
-        <div className="flex items-center gap-4">
-          <button
-            type="button"
-            onClick={() => setIsQrOpen(true)}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-rose-500/15 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 text-xs font-semibold tracking-wider uppercase transition-all hover:scale-105 active:scale-95 shadow-lg"
-          >
-            <QrCode className="w-3.5 h-3.5 text-rose-400" />
-            <span>Barcode Cinta</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-luxury-surface/80 border border-rose-400/20 text-xs text-rose-300 hover:text-white transition-colors tracking-wider uppercase font-medium hover:scale-105 active:scale-95"
-          >
-            <span>Kembali ke Atas</span>
-            <ChevronUp className="w-4 h-4 text-rose-400" />
-          </button>
-        </div>
+        {/* Scroll To Top */}
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className="flex items-center gap-1.5 px-6 py-2.5 rounded-full bg-luxury-surface/80 hover:bg-rose-500/20 border border-rose-400/20 text-xs text-rose-300 hover:text-white transition-all tracking-wider uppercase font-medium hover:scale-105 active:scale-95 shadow"
+        >
+          <span>Kembali ke Atas</span>
+          <ChevronUp className="w-4 h-4 text-rose-400" />
+        </button>
 
         {/* Bottom Note */}
         <p className="text-xs text-rose-300/50 mt-10 tracking-wide font-light">
           Hari ini dan selamanya, aku akan selalu mencintaimu.
         </p>
       </div>
-
-      {/* QR Code Love Modal */}
-      <QrCodeModal isOpen={isQrOpen} onClose={() => setIsQrOpen(false)} />
     </footer>
   );
 }
