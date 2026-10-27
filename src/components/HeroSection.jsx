@@ -43,9 +43,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-glass border border-rose-400/25 mb-6 shadow-xl shadow-black/40"
+        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-glass border border-rose-400/25 mb-6 shadow-xl shadow-black/40 animate-float"
       >
-        <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+        <Sparkles className="w-3.5 h-3.5 text-rose-400 animate-pulse" />
         <span className="text-xs uppercase tracking-widest font-medium text-rose-300">
           Untukmu yang Tersayang • {data.age} Tahun Penuh Makna
         </span>
@@ -113,10 +113,10 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-full bg-luxury-glass border border-luxury-gold/25 mb-10 max-w-lg shadow-lg"
+        className="flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-full bg-luxury-glass border border-luxury-gold/25 mb-10 max-w-lg shadow-lg animate-float-delayed"
       >
         <div className="flex items-center gap-2 text-luxury-gold text-xs font-serif italic">
-          <Music className="w-4 h-4 text-luxury-gold animate-bounce" />
+          <Music className="w-4 h-4 text-rose-400 animate-bounce" />
           <span>"Hanya kamu yang bisa membuatku tersenyum..."</span>
         </div>
         <span className="hidden sm:inline text-luxury-gold/30">•</span>
@@ -135,9 +135,9 @@ export default function HeroSection() {
         <button
           type="button"
           onClick={() => setIsMovieModeOpen(true)}
-          className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-bold text-xs tracking-widest uppercase shadow-2xl shadow-rose-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
+          className="animate-shimmer px-8 py-4 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-bold text-xs tracking-widest uppercase shadow-2xl shadow-rose-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
         >
-          <Heart className="w-4 h-4 fill-current" />
+          <Heart className="w-4 h-4 fill-current animate-heartbeat" />
           <span>Putar Cerita Manis Kita</span>
         </button>
 
@@ -145,7 +145,7 @@ export default function HeroSection() {
           href="#photos"
           className="px-6 py-3.5 rounded-full bg-luxury-surface/90 border border-rose-400/30 text-rose-200 font-medium text-xs tracking-widest uppercase hover:bg-rose-500/15 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
         >
-          <Sparkles className="w-4 h-4 text-rose-400" />
+          <Sparkles className="w-4 h-4 text-rose-400 animate-spin-slow" />
           <span>Lihat Dua Foto Kita</span>
         </a>
       </motion.div>

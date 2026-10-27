@@ -47,7 +47,7 @@ export default function CinematicFilmReel({ onOpenMovieMode }) {
       <div className="max-w-7xl mx-auto px-4 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full bg-rose-500/15 flex items-center justify-center border border-rose-400/30">
-            <Heart className="w-4 h-4 text-rose-400 fill-rose-500/50" />
+            <Heart className="w-4 h-4 text-rose-400 fill-rose-500/50 animate-heartbeat" />
           </div>
           <div>
             <span className="text-[10px] tracking-widest text-rose-300 uppercase font-medium">
@@ -63,7 +63,7 @@ export default function CinematicFilmReel({ onOpenMovieMode }) {
         <button
           type="button"
           onClick={onOpenMovieMode}
-          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-wider uppercase shadow-xl shadow-rose-950/60 hover:scale-105 active:scale-95 transition-all"
+          className="animate-shimmer flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-wider uppercase shadow-xl shadow-rose-950/60 hover:scale-105 active:scale-95 transition-all"
         >
           <Play className="w-3.5 h-3.5 fill-current" />
           <span>Putar Cerita Layar Penuh</span>
@@ -87,7 +87,7 @@ export default function CinematicFilmReel({ onOpenMovieMode }) {
           {allFrames.map((frame, idx) => (
             <div
               key={idx}
-              className="relative flex-shrink-0 w-72 sm:w-84 p-4 rounded-2xl bg-[#140811] border border-rose-500/25 shadow-2xl flex flex-col justify-between group"
+              className="relative flex-shrink-0 w-72 sm:w-84 p-4 rounded-2xl bg-[#140811] border border-rose-500/25 shadow-2xl flex flex-col justify-between group hover:border-rose-400/60 hover:shadow-[0_0_40px_rgba(244,63,94,0.35)] transition-all duration-500"
             >
               {/* Frame tag */}
               <div className="flex items-center justify-between text-[10px] text-rose-300 uppercase mb-2 font-medium">

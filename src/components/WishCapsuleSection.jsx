@@ -65,8 +65,8 @@ export default function WishCapsuleSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-            whileHover={{ y: -6, scale: 1.02 }}
-            className="group relative p-6 sm:p-8 rounded-3xl bg-luxury-card border border-luxury-gold/20 hover:border-luxury-gold/50 shadow-xl transition-all duration-300"
+            whileHover={{ y: -8, scale: 1.03 }}
+            className="group relative p-6 sm:p-8 rounded-3xl bg-luxury-card border border-rose-500/20 hover:border-rose-400/50 hover:shadow-[0_0_35px_rgba(244,63,94,0.25)] shadow-xl transition-all duration-500 cursor-pointer"
           >
             {/* Top Row: Icon + Badge */}
             <div className="flex items-center justify-between mb-5">

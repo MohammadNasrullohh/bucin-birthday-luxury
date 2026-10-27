@@ -57,6 +57,118 @@
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
 }
 
+/* Shimmer Light Sweep Effect */
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmerSweep 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Gentle Floating Animation */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: gentleFloat 7s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: gentleFloat 6s ease-in-out 2s infinite;
+}
+
+/* Soft Cardiac Heart Pulse */
+@keyframes heartBeatSmooth {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartBeatSmooth 2.4s ease-in-out infinite;
+}
+
+/* Audio Visualizer Bar Bounce */
+@keyframes soundBarBounce {
+  0%, 100% {
+    height: 6px;
+    opacity: 0.4;
+  }
+  50% {
+    height: 28px;
+    opacity: 1;
+  }
+}
+
+.animate-bar-1 { animation: soundBarBounce 1.2s ease-in-out infinite 0.1s; }
+.animate-bar-2 { animation: soundBarBounce 0.9s ease-in-out infinite 0.3s; }
+.animate-bar-3 { animation: soundBarBounce 1.4s ease-in-out infinite 0.2s; }
+.animate-bar-4 { animation: soundBarBounce 1.1s ease-in-out infinite 0.4s; }
+.animate-bar-5 { animation: soundBarBounce 1.3s ease-in-out infinite 0.15s; }
+.animate-bar-6 { animation: soundBarBounce 0.85s ease-in-out infinite 0.35s; }
+.animate-bar-7 { animation: soundBarBounce 1.25s ease-in-out infinite 0.25s; }
+.animate-bar-8 { animation: soundBarBounce 1.05s ease-in-out infinite 0.05s; }
+
+/* Ken Burns Subtle Breathing */
+@keyframes kenBurnsBreathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsBreathing 12s ease-in-out infinite;
+}
+
 /* Candle flame animation */
 @keyframes flameFlicker {
   0%, 100% {
@@ -93,8 +205,8 @@
     transform: scale(1);
   }
   50% {
-    opacity: 0.6;
-    transform: scale(1.1);
+    opacity: 0.65;
+    transform: scale(1.12);
   }
 }
 
@@ -132,5 +244,5 @@
 }
 
 .animate-film-roll {
-  animation: filmRoll 35s linear infinite;
+  animation: filmRoll 32s linear infinite;
 }

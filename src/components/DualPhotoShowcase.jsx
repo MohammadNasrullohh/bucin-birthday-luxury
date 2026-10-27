@@ -206,11 +206,11 @@ function PhotoCard({ photo, index, onZoom, rotation }) {
       </div>
 
       {/* Image Container with Dark Vignette & Zoom */}
-      <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-black/80 border border-rose-500/20 mb-6 shadow-2xl group/img">
+      <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-black/80 border border-rose-500/20 mb-6 shadow-2xl group/img hover:border-rose-400/50 hover:shadow-[0_0_50px_rgba(244,63,94,0.3)] transition-all duration-500">
         <img
           src={photo.url}
           alt={photo.title}
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-108 will-change-transform"
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110 will-change-transform animate-ken-burns"
         />
 
         {/* Cinematic dark vignette */}

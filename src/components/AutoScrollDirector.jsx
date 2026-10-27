@@ -35,7 +35,7 @@ export default function AutoScrollDirector() {
     }
 
     const step = () => {
-      window.scrollBy(0, 0.95);
+      window.scrollBy(0, 0.85);
 
       // Check if reached bottom of the page
       const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 20;

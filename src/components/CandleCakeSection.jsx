@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { useCelebration } from '../context/CelebrationContext';
-import { Flame, Sparkles, Heart, RotateCcw, Send } from 'lucide-react';
+import { Flame, Sparkles, Heart, RotateCcw } from 'lucide-react';
 
 export default function CandleCakeSection() {
   const { data, isCandleBlown, setIsCandleBlown } = useCelebration();
-  const [secretWish, setSecretWish] = useState('');
-  const [isWishSaved, setIsWishSaved] = useState(false);
 
   // Trigger luxury golden/rose confetti
   const triggerConfetti = () => {
@@ -48,14 +46,6 @@ export default function CandleCakeSection() {
     setIsCandleBlown(false);
   };
 
-  const handleSaveWish = (e) => {
-    e.preventDefault();
-    if (secretWish.trim()) {
-      setIsWishSaved(true);
-      triggerConfetti();
-    }
-  };
-
   return (
     <section id="candle" className="relative py-28 px-4 max-w-4xl mx-auto text-center">
       {/* Background ambient warm circle */}
@@ -86,7 +76,7 @@ export default function CandleCakeSection() {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative max-w-md mx-auto p-8 sm:p-12 rounded-3xl bg-luxury-card border border-luxury-gold/25 shadow-2xl shadow-black/90 flex flex-col items-center"
+        className="relative max-w-md mx-auto p-8 sm:p-12 rounded-3xl bg-luxury-card border border-luxury-gold/25 shadow-2xl shadow-black/90 flex flex-col items-center animate-float-slow"
       >
         {/* Candle Flame & Wick */}
         <div className="relative mb-2 flex flex-col items-center">
@@ -166,7 +156,7 @@ export default function CandleCakeSection() {
               whileTap={{ scale: 0.96 }}
               type="button"
               onClick={handleBlowCandle}
-              className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-widest uppercase shadow-xl shadow-rose-950/60 transition-all flex items-center justify-center gap-2"
+              className="animate-shimmer w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-widest uppercase shadow-xl shadow-rose-950/60 transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
             >
               <Flame className="w-4 h-4 fill-current" />
               <span>Tiup Lilin Sekarang</span>
@@ -202,37 +192,6 @@ export default function CandleCakeSection() {
           )}
         </div>
 
-        {/* Wish Whisper Box */}
-        <form onSubmit={handleSaveWish} className="mt-6 w-full pt-6 border-t border-luxury-gold/15">
-          <label className="block text-xs text-luxury-muted font-light mb-2">
-            Punya permohonan rahasia? Simpan di sini:
-          </label>
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={secretWish}
-              onChange={(e) => setSecretWish(e.target.value)}
-              placeholder="Contoh: Selalu bahagia bersamamu..."
-              className="flex-1 px-4 py-2.5 rounded-xl bg-luxury-surface border border-luxury-gold/25 text-xs text-luxury-ivory focus:outline-none focus:border-luxury-gold"
-            />
-            <button
-              type="submit"
-              className="px-4 py-2 rounded-xl bg-luxury-gold/20 hover:bg-luxury-gold/30 border border-luxury-gold/30 text-luxury-gold text-xs font-medium transition-colors flex items-center gap-1"
-            >
-              <Send className="w-3 h-3" />
-              <span>Kirim</span>
-            </button>
-          </div>
-          {isWishSaved && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-[11px] text-emerald-400 mt-2 font-light"
-            >
-              ✨ Harapanmu telah tersimpan rapi di dalam lubuk hati.
-            </motion.p>
-          )}
-        </form>
 
       </motion.div>
     </section>

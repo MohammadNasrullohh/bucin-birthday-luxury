@@ -140,6 +140,20 @@ export default function MusicLyricsPlayer() {
               {isPlaying ? 'Lagu sedang berputar lembut' : 'Klik piringan untuk memutar'}
             </span>
           </div>
+
+          {/* Animated Audio Equalizer Visualizer */}
+          {isPlaying && (
+            <div className="flex items-end justify-center gap-1.5 h-6 mt-4">
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-1" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-2" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-3" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-4" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-5" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-6" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-7" />
+              <span className="w-1 bg-gradient-to-t from-rose-500 to-pink-300 rounded-full animate-bar-8" />
+            </div>
+          )}
         </div>
 
         {/* Right Side: Interactive Synchronized Lyrics & Scrubber (7 Cols) */}
