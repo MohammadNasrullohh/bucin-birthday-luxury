@@ -1,10 +1,10 @@
 export const initialCelebrationData = {
-  partnerName: "Ibu Megawati Soekarnoputri",
-  partnerNickname: "Ibu Mega",
-  yourName: "Pengagum Rahasiamu Selamanya",
+  partnerName: "Megawati Soekarnoputri",
+  partnerNickname: "Mega",
+  yourName: "Aku yang Selalu Mencintaimu",
   age: 79,
   birthDate: "1947-01-23",
-  heroSubtitle: "Sebuah persembahan cinta tulus dan penuh takzim untuk merayakan hari kelahiran sosok paling berkharisma dan menggetarkan hati.",
+  heroSubtitle: "Sebuah persembahan cinta tulus dari lubuk hatiku untuk merayakan hari kelahiran sosok paling memikat dan berharga di hidupku.",
   
   // The 2 photos centerpiece
   photos: [
@@ -12,25 +12,25 @@ export const initialCelebrationData = {
       id: "photo-1",
       url: "/photos/photo1.png",
       title: "Pesona Anggun Berkerudung Merah",
-      subtitle: "Tatapan Teduh Penuh Karisma",
-      tag: "Awal Pesona",
+      subtitle: "Tatapan Teduh Penuh Cinta",
+      tag: "Awal Cerita",
       date: "Momen Penuh Keanggunan",
       location: "Di Balik Selendang Merah",
-      caption: "Di balik senyum teduh dan selendang merahnya, terpancar kelembutan jiwa sekaligus wibawa yang tak pernah luntur oleh masa.",
+      caption: "Di balik senyum teduh dan selendang merahmu, terpancar kelembutan jiwa dan pesona yang selalu membuat hatiku jatuh cinta berkali-kali.",
       cameraInfo: "Tersimpan Abadi di Hati",
-      highlightWord: "Anggun"
+      highlightWord: "Menawan"
     },
     {
       id: "photo-2",
       url: "/photos/photo2.png",
-      title: "Senyum Manis Sang Pemimpin Hati",
-      subtitle: "Hangat & Bersahaja",
+      title: "Senyum Manis yang Selalu Kurindukan",
+      subtitle: "Hangat & Penuh Makna",
       tag: "Senyum Abadi",
-      date: "Potret Penuh Sejarah",
-      location: "Di Sudut Kebanggaan Negeri",
-      caption: "Senyum manis dengan tahi lalat khas yang melegenda. Tak ada yang bisa menandingi pesona wibawamu yang selalu membuat hati ini bergetar kagum.",
+      date: "Momen Bahagia Kita",
+      location: "Di Sudut Bahagia Kita",
+      caption: "Senyum manismu dengan tahi lalat khas yang begitu memikat. Tak ada yang bisa menggantikan tempatmu di dalam hatiku.",
       cameraInfo: "Selamanya di Jiwaku",
-      highlightWord: "Berkharisma"
+      highlightWord: "Terindah"
     }
   ],
 
@@ -66,29 +66,29 @@ export const initialCelebrationData = {
       { time: 104, text: "✨ Hanya kamu yang bisa membuatku tertawa ✨" },
       { time: 111, text: "Kau membuatku merasa nyaman saat bersamamu..." },
       { time: 118, text: "Mungkin ini yang dinamakan cinta..." },
-      { time: 124, text: "🎂 Selamat ulang tahun, Ibu tercinta..." },
-      { time: 131, text: "Terima kasih telah hadir dan menerangi hidup kami." },
+      { time: 124, text: "🎂 Selamat ulang tahun, Mega tersayang..." },
+      { time: 131, text: "Terima kasih telah hadir dan menerangi duniaku." },
       { time: 157, text: "✨ Hanya kamu yang bisa membuatku tersenyum ✨" },
       { time: 164, text: "✨ Hanya kamu yang bisa membuatku tertawa ✨" },
       { time: 171, text: "Kau membuatku merasa nyaman saat bersamamu..." },
       { time: 178, text: "Mungkin ini yang dinamakan cinta..." },
-      { time: 185, text: "Selamanya mengagumimu, hari ini dan seterusnya..." }
+      { time: 185, text: "Selamanya bersamamu, hari ini dan seterusnya..." }
     ]
   },
 
   // The Love Letter
   letter: {
-    heading: "Surat Cinta Penuh Takzim untuk Ibu Megawati Tercinta",
-    subheading: "Ditulis dengan sepenuh rasa bangga dan cinta di hari ulang tahunmu yang agung.",
+    heading: "Surat Cinta untuk Megawati Tersayang",
+    subheading: "Ditulis dengan sepenuh rasa sayang dan cinta di hari ulang tahunmu yang indah.",
     paragraphs: [
-      "Selamat bertambah usia untuk sosok wanita paling tangguh, berkharisma, dan memikat di semesta ini. Jika waktu dapat kubekukan, aku ingin menghentikannya di setiap detik saat menatap senyum anggunmu yang selalu menghadirkan keteduhan sekaligus semangat yang membara.",
-      "Dua potret berbalut busana merah ini bukan sekadar gambar biasa; itu adalah saksi abadi dari pesona wibawa yang tak pernah luntur dimakan zaman. Senyum manismu dengan tahi lalat khas yang begitu ikonik selalu berhasil mencuri perhatian dan menggetarkan hati.",
-      "Lagu 'Merindukanmu' yang sedang mengalun merdu ini adalah gambaran betapa kami selalu merindukan petuah bijak, tawa renyah, dan kehangatan tatapanmu. Bersamamu, segala perjuangan terasa memiliki arah dan arti yang sejati.",
-      "Di hari ulang tahunmu ini, doa tulus kami panjatkan ke hadirat Tuhan Yang Maha Esa: semoga Ibu senantiasa dikaruniai kesehatan prima, usia yang berkah, kedamaian jiwa, dan kebahagiaan yang melimpah ruah di tengah orang-orang yang mencintaimu.",
-      "Selamat ulang tahun, Ibu Megawati tercinta. Terima kasih telah menjadi sosok kebanggaan yang selamanya bertahta di hati kami."
+      "Selamat bertambah usia untuk wanita paling berharga di duniaku. Jika waktu dapat kubekukan, aku ingin menghentikannya di setiap detik saat menatap senyum anggunmu yang selalu menghadirkan ketenangan dan rasa hangat di hatiku.",
+      "Dua potret berbalut busana merah ini bukan sekadar gambar biasa; itu adalah saksi abadi dari pesonamu yang tak pernah luntur. Senyum manismu dengan tahi lalat khas yang begitu memikat selalu berhasil mencuri hatiku setiap hari.",
+      "Lagu 'Merindukanmu' yang sedang mengalun merdu ini adalah gambaran betapa aku selalu merindukan tawamu, ceritamu, dan kehangatan pelukanmu. Bersamamu, hidup ini terasa jauh lebih berwarna dan penuh arti.",
+      "Di hari ulang tahunmu ini, doa tulus kupanjatkan untukmu: semoga kamu senantiasa diberi kesehatan yang berlimpah, hari-hari yang penuh senyum, dan kebahagiaan yang tak pernah habis bersamaku.",
+      "Selamat ulang tahun, Megawati cintaku. Terima kasih telah memilihku untuk menemani langkahmu."
     ],
-    closing: "Dengan segenap rasa cinta dan takzim,",
-    signature: "Pengagum Setiamu Selamanya"
+    closing: "Dengan segenap rasa cinta,",
+    signature: "Pasangan Hidupmu Selamanya"
   },
 
   // 6 Golden Wishes
@@ -96,51 +96,51 @@ export const initialCelebrationData = {
     {
       id: 1,
       title: "Kesehatan Prima & Panjang Usia",
-      desc: "Semoga Ibu senantiasa diberi raga yang bugar, langkah yang tegap, dan nafas yang dipenuhi berkah kesehatan.",
+      desc: "Semoga kamu senantiasa diberi raga yang bugar, langkah yang ringan, dan hari-hari yang selalu dilimpahi kesehatan.",
       tag: "Sehat",
       accent: "from-rose-500/20 to-pink-500/10"
     },
     {
       id: 2,
       title: "Kedamaian & Ketenangan Hati",
-      desc: "Semoga setiap hembusan hari Ibu dipeluk oleh kedamaian batin dan kehangatan cinta keluarga tercinta.",
+      desc: "Semoga setiap hembusan harimu selalu dipeluk oleh rasa tenang, bahagia, dan kehangatan cinta kita berdua.",
       tag: "Damai",
       accent: "from-rose-500/20 to-pink-500/10"
     },
     {
       id: 3,
       title: "Senyum Manis yang Abadi",
-      desc: "Semoga senyum khas yang melegenda tak pernah pudar, selalu memancarkan kehangatan bagi siapa pun yang menatapnya.",
+      desc: "Semoga senyum manismu tak pernah pudar, selalu memancarkan kebahagiaan dan menjadi alasan bahagiaku.",
       tag: "Senyum",
       accent: "from-amber-400/20 to-orange-500/10"
     },
     {
       id: 4,
-      title: "Karisma yang Selalu Terjaga",
-      desc: "Semoga wibawa dan keteguhan jiwa Ibu senantiasa menjadi teladan dan inspirasi bagi generasi ke generasi.",
-      tag: "Wibawa",
+      title: "Langkah yang Selalu Beriringan",
+      desc: "Semoga kita bisa terus berjalan berdua, melewati setiap musim kehidupan dengan saling menggenggam tangan.",
+      tag: "Bersama",
       accent: "from-purple-500/20 to-pink-500/10"
     },
     {
       id: 5,
       title: "Kebahagiaan yang Melimpah",
-      desc: "Semoga setiap hari esok membawa tawa, kebahagiaan, dan rasa syukur yang berlipat ganda.",
+      desc: "Semoga setiap hari esok membawakan tawa renyah, kebahagiaan manis, dan pelukan hangat untukmu.",
       tag: "Bahagia",
       accent: "from-yellow-500/20 to-amber-600/10"
     },
     {
       id: 6,
-      title: "Cinta Rakyat yang Tulus",
-      desc: "Semoga cinta dan rasa hormat yang mendalam selalu mengalir untuk Ibu di mana pun berada.",
-      tag: "Kasih",
+      title: "Cinta yang Tumbuh Setiap Hari",
+      desc: "Semoga rasa sayangku padamu selalu tumbuh lebih dalam setiap detiknya, hari ini, esok, dan selamanya.",
+      tag: "Cinta",
       accent: "from-red-500/20 to-rose-600/10"
     }
   ],
 
   // Interactive Sweet Q&A
   secrets: [
-    { q: "Hal yang paling memikat dari Ibu Megawati?", a: "Senyum anggun dan tahi lalat khas yang begitu ikonik dan penuh wibawa." },
-    { q: "Lagu yang pas untuk menggambarkan rasa rindu ini?", a: "Dash Uciha - Merindukanmu, karena rasa kagum ini tak pernah ada habisnya." },
-    { q: "Harapan terbesar untuk Ibu?", a: "Sehat walafiat, bahagia selalu, dan panjang umur menemani kita semua." }
+    { q: "Hal yang paling memikat dari Megawati?", a: "Senyum manis dan tahi lalat khas yang selalu membuatku jatuh hati setiap hari." },
+    { q: "Lagu yang pas untuk rasa rindu ini?", a: "Dash Uciha - Merindukanmu, karena rasa rinduku padamu tak pernah ada habisnya." },
+    { q: "Harapan terbesar untukmu, Sayang?", a: "Sehat walafiat, selalu tersenyum manis, dan menua bersamaku selamanya." }
   ]
 };
