@@ -51,7 +51,7 @@ export default function PhotoLightboxModal() {
           <div>
             {/* Tag & Date */}
             <div className="flex items-center justify-between text-xs text-luxury-gold mb-3 font-mono">
-              <span>{activePhotoModal.tag || 'ARCHIVE'}</span>
+              <span>{activePhotoModal.tag || 'KENANGAN INDAH'}</span>
               <span className="flex items-center gap-1 text-luxury-muted">
                 <Calendar className="w-3 h-3 text-luxury-gold/70" />
                 {activePhotoModal.date}
@@ -78,10 +78,10 @@ export default function PhotoLightboxModal() {
             </p>
           </div>
 
-          {/* Camera Info & Download */}
+          {/* Sweet Memory Note & Download */}
           <div className="pt-6 border-t border-luxury-gold/15">
-            <div className="flex items-center gap-2 text-xs font-mono text-luxury-muted mb-4">
-              <Camera className="w-3.5 h-3.5 text-luxury-gold/70" />
+            <div className="flex items-center gap-2 text-xs text-rose-300 mb-4">
+              <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-500/50" />
               <span>{activePhotoModal.cameraInfo}</span>
             </div>
 

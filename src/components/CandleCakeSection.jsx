@@ -229,7 +229,7 @@ export default function CandleCakeSection() {
               animate={{ opacity: 1 }}
               className="text-[11px] text-emerald-400 mt-2 font-light"
             >
-              ✨ Harapanmu telah tersimpan rapi di dalam arsip ini.
+              ✨ Harapanmu telah tersimpan rapi di dalam lubuk hati.
             </motion.p>
           )}
         </form>

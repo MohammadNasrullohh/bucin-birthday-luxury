@@ -71,7 +71,7 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="text-base sm:text-xl text-luxury-muted font-light max-w-2xl leading-relaxed mb-10"
       >
-        {data.heroSubtitle || "Sebuah arsip digital persembahan cinta untuk merayakan kehadiran jiwa paling indah di dunia ini."}
+        {data.heroSubtitle || "Sebuah persembahan cinta tulus dari lubuk hatiku untuk merayakan kehadiran jiwa paling indah dan berharga di dunia ini."}
       </motion.p>
 
       {/* Live Counter Display: Time Alive in the World */}

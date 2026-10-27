@@ -63,10 +63,10 @@ export default function CustomizerModal() {
             </div>
             <div>
               <h3 className="font-serif text-lg font-bold text-luxury-ivory">
-                Kustomisasi Web Bucin
+                Pesan & Foto Kenangan
               </h3>
               <p className="text-xs text-luxury-muted">
-                Ubah nama, 2 foto kenangan, dan surat cinta Anda
+                Ubah nama, 2 foto kenangan, dan surat cinta untuknya
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function CustomizerModal() {
 
               <div>
                 <label className="block text-xs uppercase tracking-wider text-luxury-gold mb-1.5 font-mono">
-                  Nama Anda / Pengirim
+                  Nama Pengirim / Panggilanmu
                 </label>
                 <input
                   type="text"

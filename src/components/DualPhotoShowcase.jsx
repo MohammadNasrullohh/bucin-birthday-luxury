@@ -319,7 +319,7 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
           type="button"
           onClick={onReplace}
           className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-500/15 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 text-xs font-medium transition-all hover:scale-105 active:scale-95"
-          title="Unggah foto Anda sendiri untuk posisi ini"
+          title="Ganti foto kenangan ini"
         >
           <Upload className="w-3 h-3" />
           <span>Ganti Foto Ini</span>
