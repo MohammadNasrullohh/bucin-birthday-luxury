@@ -101,7 +101,7 @@ export default function WishCapsuleSection() {
       >
         <div className="flex items-center gap-2 mb-6 text-xs uppercase tracking-[0.2em] font-mono text-luxury-gold">
           <HelpCircle className="w-4 h-4" />
-          <span>Hal-Hal Kecil Tentang Kita (Klik untuk Membuka)</span>
+          <span>Cerita Manis Tentang Kita</span>
         </div>
 
         <div className="space-y-4">

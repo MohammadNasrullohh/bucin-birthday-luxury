@@ -10,7 +10,6 @@ import CandleCakeSection from './components/CandleCakeSection';
 import LoveLetterSection from './components/LoveLetterSection';
 import WishCapsuleSection from './components/WishCapsuleSection';
 import Footer from './components/Footer';
-import CustomizerModal from './components/CustomizerModal';
 import PhotoLightboxModal from './components/PhotoLightboxModal';
 import CinematicParticles from './components/CinematicParticles';
 import CursorGlow from './components/CursorGlow';
@@ -85,7 +84,6 @@ function MainApp() {
       />
 
       {/* Modals & Drawers */}
-      <CustomizerModal />
       <PhotoLightboxModal />
     </div>
   );

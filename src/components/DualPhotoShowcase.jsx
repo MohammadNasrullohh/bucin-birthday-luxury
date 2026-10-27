@@ -4,33 +4,15 @@ import { useCelebration } from '../context/CelebrationContext';
 import { 
   Sparkles, 
   Maximize2, 
-  Upload, 
   Heart, 
   Calendar, 
   MapPin 
 } from 'lucide-react';
 
 export default function DualPhotoShowcase() {
-  const { data, updatePhoto, setActivePhotoModal } = useCelebration();
+  const { data, setActivePhotoModal } = useCelebration();
   const [viewMode, setViewMode] = useState('side-by-side'); // 'side-by-side' or 'single-focus'
   const [focusedIndex, setFocusedIndex] = useState(0);
-
-  // File upload input refs for photo 1 & photo 2
-  const fileInputRef1 = useRef(null);
-  const fileInputRef2 = useRef(null);
-
-  const handleFileUpload = (e, photoId) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        if (event.target?.result) {
-          updatePhoto(photoId, { url: event.target.result });
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   const photos = data.photos || [];
   const photo1 = photos[0];
@@ -89,21 +71,6 @@ export default function DualPhotoShowcase() {
       </motion.div>
 
       {/* Hidden File Inputs for quick upload */}
-      <input
-        type="file"
-        ref={fileInputRef1}
-        accept="image/*"
-        className="hidden"
-        onChange={(e) => handleFileUpload(e, 'photo-1')}
-      />
-      <input
-        type="file"
-        ref={fileInputRef2}
-        accept="image/*"
-        className="hidden"
-        onChange={(e) => handleFileUpload(e, 'photo-2')}
-      />
-
       {/* View Mode: SIDE-BY-SIDE */}
       {viewMode === 'side-by-side' && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
@@ -118,7 +85,6 @@ export default function DualPhotoShowcase() {
               photo={photo1}
               index={0}
               onZoom={() => setActivePhotoModal(photo1)}
-              onReplace={() => fileInputRef1.current?.click()}
               rotation="-rotate-1 hover:rotate-0"
             />
           </motion.div>
@@ -134,7 +100,6 @@ export default function DualPhotoShowcase() {
               photo={photo2}
               index={1}
               onZoom={() => setActivePhotoModal(photo2)}
-              onReplace={() => fileInputRef2.current?.click()}
               rotation="rotate-1 hover:rotate-0"
             />
           </motion.div>
@@ -155,10 +120,6 @@ export default function DualPhotoShowcase() {
               photo={photos[focusedIndex]}
               index={focusedIndex}
               onZoom={() => setActivePhotoModal(photos[focusedIndex])}
-              onReplace={() => {
-                if (focusedIndex === 0) fileInputRef1.current?.click();
-                else fileInputRef2.current?.click();
-              }}
               rotation="rotate-0"
             />
           </div>
@@ -190,25 +151,12 @@ export default function DualPhotoShowcase() {
           </div>
         </motion.div>
       )}
-
-      {/* Customizer Note / Tip */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mt-14 text-center"
-      >
-        <p className="text-xs text-rose-300/80 max-w-md mx-auto flex items-center justify-center gap-2 font-light">
-          <Upload className="w-3.5 h-3.5 text-rose-400" />
-          <span>Kamu bisa langsung menekan tombol <strong>"Ganti Foto Ini"</strong> pada setiap kartu untuk memasukkan 2 foto milikmu sendiri.</span>
-        </p>
-      </motion.div>
     </section>
   );
 }
 
 // Subcomponent: Individual Luxury Photo Card with 3D tilt & sweet loving accents
-function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
+function PhotoCard({ photo, index, onZoom, rotation }) {
   const cardRef = useRef(null);
   const [transformStyle, setTransformStyle] = useState('');
 
@@ -311,19 +259,11 @@ function PhotoCard({ photo, index, onZoom, onReplace, rotation }) {
       <div className="pt-4 border-t border-rose-500/15 flex items-center justify-between">
         <span className="text-xs text-rose-300/80 flex items-center gap-1.5 font-light">
           <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-500/50" />
-          <span>Tersimpan indah di hati</span>
+          <span>Tersimpan abadi di relung hati</span>
         </span>
-
-        {/* Replace Photo Button */}
-        <button
-          type="button"
-          onClick={onReplace}
-          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-500/15 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 text-xs font-medium transition-all hover:scale-105 active:scale-95"
-          title="Ganti foto kenangan ini"
-        >
-          <Upload className="w-3 h-3" />
-          <span>Ganti Foto Ini</span>
-        </button>
+        <span className="font-serif italic text-xs text-rose-300/90 font-medium">
+          {index === 0 ? 'Momen Tak Terlupakan' : 'Cinta Selamanya'}
+        </span>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useCelebration } from '../context/CelebrationContext';
-import { Mail, Copy, Check, Heart, Edit3, Sparkles } from 'lucide-react';
+import { Mail, Copy, Check, Heart, Sparkles } from 'lucide-react';
 
 export default function LoveLetterSection() {
-  const { data, setIsCustomizerOpen } = useCelebration();
+  const { data } = useCelebration();
   const [copied, setCopied] = useState(false);
 
   const letter = data.letter || {};
@@ -75,26 +75,16 @@ export default function LoveLetterSection() {
             </div>
           </div>
 
-          {/* Action buttons (Copy / Edit) */}
+          {/* Action button (Copy) */}
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={handleCopy}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-luxury-surface border border-luxury-gold/25 hover:border-luxury-gold/60 text-xs text-luxury-ivory transition-all hover:scale-105 active:scale-95 shadow"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-luxury-surface border border-rose-400/25 hover:border-rose-400/60 text-xs text-rose-200 transition-all hover:scale-105 active:scale-95 shadow"
               title="Salin isi surat ini"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-luxury-gold" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-rose-400" />}
               <span>{copied ? 'Tersalin' : 'Salin Surat'}</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setIsCustomizerOpen(true)}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-luxury-surface border border-luxury-gold/25 hover:border-luxury-gold/60 text-xs text-luxury-gold transition-all hover:scale-105 active:scale-95 shadow"
-              title="Sunting isi surat cinta"
-            >
-              <Edit3 className="w-3.5 h-3.5" />
-              <span>Edit Pesan</span>
             </button>
           </div>
         </div>

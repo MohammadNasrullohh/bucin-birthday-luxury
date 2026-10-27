@@ -150,7 +150,7 @@ export default function MusicLyricsPlayer() {
             <div className="flex items-center justify-between mb-3 pb-2 border-b border-rose-500/15">
               <span className="text-xs uppercase tracking-widest text-rose-300 flex items-center gap-2">
                 <Sparkles className="w-3.5 h-3.5 text-rose-400" />
-                Lirik Lagu (Bisa diklik untuk melompat)
+                Untaian Lirik Menyentuh Hati
               </span>
               <span className="text-xs text-rose-300/70">
                 {formatTime(currentTime)} / {formatTime(duration)}
