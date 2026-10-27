@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useCelebration } from '../context/CelebrationContext';
 import { Mail, Copy, Check, Heart, Edit3, Sparkles } from 'lucide-react';
 
@@ -17,13 +18,19 @@ export default function LoveLetterSection() {
   };
 
   return (
-    <section id="letter" className="relative py-24 px-4 max-w-4xl mx-auto">
+    <section id="letter" className="relative py-28 px-4 max-w-4xl mx-auto">
       {/* Background radial glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-96 h-96 bg-luxury-rose/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-luxury-rose/5 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-luxury-card border border-luxury-gold/20 text-luxury-gold text-xs tracking-[0.25em] uppercase mb-4">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-100px' }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="text-center max-w-2xl mx-auto mb-16"
+      >
+        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-luxury-card border border-luxury-gold/25 text-luxury-gold text-xs tracking-[0.25em] uppercase mb-4 shadow-lg">
           <Mail className="w-3.5 h-3.5" />
           <span>CONFIDENTIAL MEMOIR • SURAT RAHASIA</span>
         </div>
@@ -33,16 +40,21 @@ export default function LoveLetterSection() {
         <p className="text-luxury-muted text-sm sm:text-base font-light leading-relaxed">
           Kata-kata yang tak selalu sempat kuucapkan di sela riuh dunia, kutitipkan seluruhnya dalam surat ini.
         </p>
-      </div>
+      </motion.div>
 
       {/* Luxury Parchment Folio Container */}
-      <div className="relative rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#181625] via-[#13111F] to-[#0D0C15] border border-luxury-gold/30 shadow-2xl overflow-hidden">
-        
+      <motion.div
+        initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
+        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        className="relative rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#181625] via-[#13111F] to-[#0D0C15] border border-luxury-gold/30 shadow-2xl shadow-black/90 overflow-hidden"
+      >
         {/* Decorative corner borders */}
-        <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-luxury-gold/40" />
-        <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-luxury-gold/40" />
-        <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-luxury-gold/40" />
-        <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-luxury-gold/40" />
+        <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-luxury-gold/50" />
+        <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-luxury-gold/50" />
+        <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-luxury-gold/50" />
+        <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-luxury-gold/50" />
 
         {/* Top Wax Stamp & Date */}
         <div className="flex flex-col sm:flex-row items-center justify-between pb-8 mb-8 border-b border-luxury-gold/15 gap-4">
@@ -54,7 +66,7 @@ export default function LoveLetterSection() {
               </div>
             </div>
             <div>
-              <p className="text-[10px] tracking-widest uppercase font-mono text-luxury-gold/70">
+              <p className="text-[10px] tracking-widest uppercase font-mono text-luxury-gold/80">
                 ARSIP HATI • TERTANGGAL
               </p>
               <p className="font-serif text-sm text-luxury-ivory">
@@ -68,7 +80,7 @@ export default function LoveLetterSection() {
             <button
               type="button"
               onClick={handleCopy}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-luxury-surface border border-luxury-gold/20 hover:border-luxury-gold/50 text-xs text-luxury-ivory transition-colors"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-luxury-surface border border-luxury-gold/25 hover:border-luxury-gold/60 text-xs text-luxury-ivory transition-all hover:scale-105 active:scale-95 shadow"
               title="Salin isi surat ini"
             >
               {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-luxury-gold" />}
@@ -78,7 +90,7 @@ export default function LoveLetterSection() {
             <button
               type="button"
               onClick={() => setIsCustomizerOpen(true)}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-luxury-surface border border-luxury-gold/20 hover:border-luxury-gold/50 text-xs text-luxury-gold transition-colors"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-luxury-surface border border-luxury-gold/25 hover:border-luxury-gold/60 text-xs text-luxury-gold transition-all hover:scale-105 active:scale-95 shadow"
               title="Sunting isi surat cinta"
             >
               <Edit3 className="w-3.5 h-3.5" />
@@ -88,14 +100,14 @@ export default function LoveLetterSection() {
         </div>
 
         {/* Heading */}
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-gold-gradient mb-2">
+        <h3 className="font-serif text-2xl sm:text-4xl font-bold text-gold-gradient mb-3">
           {letter.heading}
         </h3>
         <p className="text-xs text-luxury-muted font-light italic mb-8">
           {letter.subheading}
         </p>
 
-        {/* Letter Paragraphs with Cormorant Garamond / Serif typography */}
+        {/* Letter Paragraphs with Cormorant Garamond typography */}
         <div className="space-y-6 text-luxury-ivory/90 font-serif text-base sm:text-lg leading-relaxed font-light tracking-wide text-justify">
           {paragraphs.map((p, idx) => (
             <p key={idx} className="first-letter:text-3xl first-letter:font-bold first-letter:text-luxury-gold">
@@ -105,13 +117,13 @@ export default function LoveLetterSection() {
         </div>
 
         {/* Signature & Sign-Off Section */}
-        <div className="mt-12 pt-8 border-t border-luxury-gold/15 flex flex-col sm:flex-row items-end justify-between gap-6">
+        <div className="mt-14 pt-8 border-t border-luxury-gold/15 flex flex-col sm:flex-row items-end justify-between gap-6">
           <div className="text-left w-full sm:w-auto">
             <p className="text-xs text-luxury-muted font-light tracking-wider uppercase mb-1">
               Catatan Khusus:
             </p>
             <p className="text-xs text-luxury-gold/80 italic font-serif">
-              "Selama lagu Merindukanmu masih bersuara, rasa ini akan tetap sama."
+              "Selama melodi Merindukanmu masih bersuara, rasa ini akan tetap sama."
             </p>
           </div>
 
@@ -125,7 +137,7 @@ export default function LoveLetterSection() {
           </div>
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 }
