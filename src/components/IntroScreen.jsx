@@ -40,25 +40,25 @@ export default function IntroScreen() {
               : { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }
           }
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="relative max-w-md w-full mx-4 p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#1A0A15] via-[#140811] to-[#0A0409] border border-rose-400/30 shadow-2xl shadow-black/95 text-center flex flex-col items-center z-20"
+          className="relative max-w-md w-full mx-3 sm:mx-4 p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#1A0A15] via-[#140811] to-[#0A0409] border border-rose-400/30 shadow-2xl shadow-black/95 text-center flex flex-col items-center z-20"
         >
           {/* Top Heart Badge */}
-          <div className="flex items-center gap-2 mb-6 text-rose-300 text-xs tracking-widest uppercase">
-            <span className="w-8 h-[1px] bg-rose-400/30" />
+          <div className="flex items-center gap-2 mb-5 sm:mb-6 text-rose-300 text-[10px] sm:text-xs tracking-wider sm:tracking-widest uppercase">
+            <span className="w-6 sm:w-8 h-[1px] bg-rose-400/30" />
             <Sparkles className="w-3.5 h-3.5 text-rose-400" />
             <span>Kado Spesial Untukmu</span>
-            <span className="w-8 h-[1px] bg-rose-400/30" />
+            <span className="w-6 sm:w-8 h-[1px] bg-rose-400/30" />
           </div>
 
           {/* Recipient Title */}
-          <p className="font-serif italic text-rose-300 text-lg mb-1">
+          <p className="font-serif italic text-rose-300 text-base sm:text-lg mb-1">
             Selamat Ulang Tahun,
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-gold-gradient mb-4">
+          <h1 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-gold-gradient mb-3 sm:mb-4">
             {data.partnerName}
           </h1>
 
-          <p className="text-sm text-luxury-muted leading-relaxed mb-8 max-w-xs font-light">
+          <p className="text-xs sm:text-sm text-luxury-muted leading-relaxed mb-6 sm:mb-8 max-w-xs font-light">
             Hari ini adalah hari paling membahagiakan karena kamu hadir di dunia. Sentuh segel hati di bawah untuk membuka surat cinta dan memutar lagu kenangan kita.
           </p>
 

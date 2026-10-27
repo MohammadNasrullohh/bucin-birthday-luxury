@@ -66,7 +66,7 @@ export default function WishCapsuleSection() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -8, scale: 1.03 }}
-            className="group relative p-6 sm:p-8 rounded-3xl bg-luxury-card border border-rose-500/20 hover:border-rose-400/50 hover:shadow-[0_0_35px_rgba(244,63,94,0.25)] shadow-xl transition-all duration-500 cursor-pointer"
+            className="group relative p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-luxury-card border border-rose-500/20 hover:border-rose-400/50 hover:shadow-[0_0_35px_rgba(244,63,94,0.25)] shadow-xl transition-all duration-500 cursor-pointer"
           >
             {/* Top Row: Icon + Badge */}
             <div className="flex items-center justify-between mb-5">
@@ -97,7 +97,7 @@ export default function WishCapsuleSection() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-3xl mx-auto p-8 sm:p-10 rounded-3xl bg-luxury-glass border border-luxury-gold/25 shadow-2xl shadow-black/80 backdrop-blur-xl"
+        className="max-w-3xl mx-auto p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-luxury-glass border border-luxury-gold/25 shadow-2xl shadow-black/80 backdrop-blur-xl"
       >
         <div className="flex items-center gap-2 mb-6 text-xs uppercase tracking-[0.2em] font-mono text-luxury-gold">
           <HelpCircle className="w-4 h-4" />

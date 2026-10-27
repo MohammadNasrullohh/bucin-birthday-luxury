@@ -121,7 +121,7 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
       </div>
 
       {/* CENTER SCREEN: Cinematic Canvas & Scenes */}
-      <div className="relative flex-1 flex items-center justify-center overflow-hidden w-full max-w-6xl mx-auto my-auto aspect-[16/9] sm:aspect-[2.39/1] max-h-[75vh] border-y border-luxury-gold/30 shadow-2xl bg-black">
+      <div className="relative flex-1 flex items-center justify-center overflow-hidden w-full max-w-6xl mx-auto my-auto aspect-[4/3] sm:aspect-[2.39/1] max-h-[65vh] sm:max-h-[75vh] border-y border-luxury-gold/30 shadow-2xl bg-black">
         
         {/* Retro 3-2-1 Countdown Leader */}
         {!hasCountdownFinished && (
@@ -327,10 +327,10 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
       </div>
 
       {/* BOTTOM LETTERBOX BAR: Cinema Controls & Scene Scrubber */}
-      <div className="relative z-40 bg-black/95 px-6 sm:px-12 py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="relative z-40 bg-black/95 px-4 sm:px-12 py-3 sm:py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
         
         {/* Play/Pause & Time */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between w-full sm:w-auto gap-4">
           <button
             type="button"
             onClick={togglePlay}
@@ -345,7 +345,7 @@ export default function CinematicMovieMode({ isOpen, onClose }) {
         </div>
 
         {/* Scene Jump Pills (Babak 1, 2, 3, 4, 5) */}
-        <div className="flex items-center gap-2 overflow-x-auto max-w-full text-xs">
+        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto max-w-full text-xs py-1 scrollbar-none w-full sm:w-auto justify-start sm:justify-center">
           {[
             { label: 'Foto Pertama', time: 13, sceneId: 1 },
             { label: 'Lirik Reff', time: 41, sceneId: 2 },

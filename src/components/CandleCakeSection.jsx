@@ -76,7 +76,7 @@ export default function CandleCakeSection() {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative max-w-md mx-auto p-8 sm:p-12 rounded-3xl bg-luxury-card border border-luxury-gold/25 shadow-2xl shadow-black/90 flex flex-col items-center animate-float-slow"
+        className="relative max-w-md mx-auto p-5 sm:p-12 rounded-2xl sm:rounded-3xl bg-luxury-card border border-luxury-gold/25 shadow-2xl shadow-black/90 flex flex-col items-center animate-float-slow"
       >
         {/* Candle Flame & Wick */}
         <div className="relative mb-2 flex flex-col items-center">
@@ -123,7 +123,7 @@ export default function CandleCakeSection() {
         {/* Minimalist Chic Tiered Cake */}
         <div className="w-full flex flex-col items-center">
           {/* Top Tier */}
-          <div className="w-44 h-14 rounded-t-2xl bg-gradient-to-b from-[#252033] to-[#171424] border-t-2 border-x-2 border-luxury-gold/30 shadow-inner relative flex items-center justify-center">
+          <div className="w-36 sm:w-44 h-12 sm:h-14 rounded-t-2xl bg-gradient-to-b from-[#252033] to-[#171424] border-t-2 border-x-2 border-luxury-gold/30 shadow-inner relative flex items-center justify-center">
             <div className="absolute bottom-0 inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-luxury-gold/40 to-transparent" />
             <span className="text-[10px] font-serif tracking-widest text-luxury-gold/80 uppercase">
               {data.age} TAHUN BAHAGIA
@@ -131,9 +131,9 @@ export default function CandleCakeSection() {
           </div>
 
           {/* Bottom Tier */}
-          <div className="w-64 h-18 rounded-t-2xl bg-gradient-to-b from-[#1C182A] to-[#120F1D] border-t-2 border-x-2 border-luxury-gold/30 shadow-lg relative flex items-center justify-center">
+          <div className="w-56 sm:w-64 h-16 sm:h-18 rounded-t-2xl bg-gradient-to-b from-[#1C182A] to-[#120F1D] border-t-2 border-x-2 border-luxury-gold/30 shadow-lg relative flex items-center justify-center">
             <div className="absolute inset-x-4 top-2 h-[1px] bg-luxury-gold/20" />
-            <span className="font-serif italic text-luxury-gold text-sm tracking-wide">
+            <span className="font-serif italic text-luxury-gold text-xs sm:text-sm tracking-wide">
               {data.partnerName}
             </span>
             <div className="absolute bottom-1 inset-x-0 flex justify-around px-4">
@@ -144,8 +144,8 @@ export default function CandleCakeSection() {
           </div>
 
           {/* Cake Stand (Pedestal) */}
-          <div className="w-72 h-4 rounded-full bg-gradient-to-r from-[#8E6D3B] via-[#DFBA84] to-[#8E6D3B] shadow-xl mt-[-2px]" />
-          <div className="w-28 h-6 bg-gradient-to-b from-[#DFBA84] to-[#6E5328] rounded-b-xl shadow-md" />
+          <div className="w-64 sm:w-72 h-3.5 sm:h-4 rounded-full bg-gradient-to-r from-[#8E6D3B] via-[#DFBA84] to-[#8E6D3B] shadow-xl mt-[-2px]" />
+          <div className="w-24 sm:w-28 h-5 sm:h-6 bg-gradient-to-b from-[#DFBA84] to-[#6E5328] rounded-b-xl shadow-md" />
         </div>
 
         {/* Interactive Action Area */}

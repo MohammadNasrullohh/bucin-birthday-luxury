@@ -80,7 +80,7 @@ export default function MusicLyricsPlayer() {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center bg-luxury-card p-6 sm:p-12 rounded-3xl border border-rose-500/25 shadow-2xl shadow-black/90 backdrop-blur-xl"
+        className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center bg-luxury-card p-4 sm:p-12 rounded-2xl sm:rounded-3xl border border-rose-500/25 shadow-2xl shadow-black/90 backdrop-blur-xl"
       >
         
         {/* Left Side: Luxury Vinyl Deck (5 Cols) */}

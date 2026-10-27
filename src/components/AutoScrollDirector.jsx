@@ -73,9 +73,9 @@ export default function AutoScrollDirector() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
-        className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4"
+        className="fixed bottom-5 sm:bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-3 sm:px-4"
       >
-        <div className="pointer-events-auto flex items-center gap-3 px-4 py-2 rounded-full bg-[#1A0A16]/90 border border-rose-400/35 shadow-2xl shadow-black/90 backdrop-blur-xl text-xs">
+        <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#1A0A16]/95 border border-rose-400/35 shadow-2xl shadow-black/90 backdrop-blur-xl text-[11px] sm:text-xs">
           
           {/* Animated Status Indicator */}
           <div className="flex items-center gap-2">

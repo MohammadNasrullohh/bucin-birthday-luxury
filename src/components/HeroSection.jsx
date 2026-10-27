@@ -33,7 +33,7 @@ export default function HeroSection() {
   }, [data.birthDate]);
 
   return (
-    <section className="relative min-h-[96vh] flex flex-col items-center justify-center pt-32 pb-20 px-4 text-center overflow-hidden">
+    <section className="relative min-h-[92vh] flex flex-col items-center justify-center pt-20 sm:pt-32 pb-14 sm:pb-20 px-3 sm:px-4 text-center overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-luxury-gold/5 rounded-full blur-[160px] pointer-events-none ambient-glow" />
       <div className="absolute top-1/3 right-1/4 w-[450px] h-[450px] bg-luxury-rose/5 rounded-full blur-[140px] pointer-events-none" />
@@ -43,10 +43,10 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-glass border border-rose-400/25 mb-6 shadow-xl shadow-black/40 animate-float"
+        className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-luxury-glass border border-rose-400/25 mb-5 sm:mb-6 shadow-xl shadow-black/40 animate-float"
       >
         <Sparkles className="w-3.5 h-3.5 text-rose-400 animate-pulse" />
-        <span className="text-xs uppercase tracking-widest font-medium text-rose-300">
+        <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-medium text-rose-300">
           Untukmu yang Tersayang • {data.age} Tahun Penuh Makna
         </span>
       </motion.div>
@@ -56,10 +56,10 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30, filter: 'blur(12px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-5xl leading-[1.12] mb-6"
+        className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-5xl leading-tight sm:leading-[1.12] mb-4 sm:mb-6"
       >
         Selamat Ulang Tahun, <br />
-        <span className="text-gold-gradient italic font-normal tracking-wide">
+        <span className="text-gold-gradient italic font-normal tracking-wide text-2xl sm:text-5xl md:text-6xl lg:text-7xl inline-block mt-1">
           {data.partnerName}
         </span>
       </motion.h1>
@@ -69,7 +69,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="text-base sm:text-xl text-luxury-muted font-light max-w-2xl leading-relaxed mb-10"
+        className="text-xs sm:text-lg text-luxury-muted font-light max-w-2xl leading-relaxed mb-8 sm:mb-10 px-2"
       >
         {data.heroSubtitle || "Sebuah persembahan cinta tulus dari lubuk hatiku untuk merayakan kehadiran jiwa paling indah dan berharga di dunia ini."}
       </motion.p>
@@ -79,14 +79,14 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.96, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-2xl p-6 sm:p-8 rounded-3xl bg-luxury-card border border-luxury-gold/25 shadow-2xl shadow-black/80 mb-10"
+        className="w-full max-w-2xl p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-luxury-card border border-luxury-gold/25 shadow-2xl shadow-black/80 mb-8 sm:mb-10"
       >
-        <div className="flex items-center justify-center gap-2 mb-4 text-xs tracking-[0.2em] uppercase text-luxury-gold/80 font-medium">
+        <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 text-[10px] sm:text-xs tracking-wider sm:tracking-[0.2em] uppercase text-luxury-gold/80 font-medium">
           <Calendar className="w-3.5 h-3.5 text-luxury-gold" />
           <span>Waktu Penuh Syukur Sejak Kehadiranmu</span>
         </div>
 
-        <div className="grid grid-cols-4 gap-2 sm:gap-4">
+        <div className="grid grid-cols-4 gap-1.5 sm:gap-4">
           {[
             { label: 'Hari', value: timeElapsed.days },
             { label: 'Jam', value: String(timeElapsed.hours).padStart(2, '0') },
@@ -95,12 +95,12 @@ export default function HeroSection() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-2xl bg-luxury-surface/80 border border-luxury-gold/15 shadow-inner"
+              className="flex flex-col items-center justify-center p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-luxury-surface/80 border border-luxury-gold/15 shadow-inner"
             >
-              <span className="font-serif text-2xl sm:text-4xl font-bold text-gold-gradient tabular-nums">
+              <span className="font-serif text-lg sm:text-3xl md:text-4xl font-bold text-gold-gradient tabular-nums">
                 {item.value}
               </span>
-              <span className="text-[10px] sm:text-xs text-luxury-muted tracking-wider uppercase mt-1">
+              <span className="text-[9px] sm:text-xs text-luxury-muted tracking-wider uppercase mt-0.5 sm:mt-1">
                 {item.label}
               </span>
             </div>
@@ -130,12 +130,12 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+        className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto max-w-xs sm:max-w-none"
       >
         <button
           type="button"
           onClick={() => setIsMovieModeOpen(true)}
-          className="animate-shimmer px-8 py-4 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-bold text-xs tracking-widest uppercase shadow-2xl shadow-rose-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center gap-2.5"
+          className="animate-shimmer w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-bold text-xs tracking-wider sm:tracking-widest uppercase shadow-2xl shadow-rose-950/60 hover:opacity-95 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2.5"
         >
           <Heart className="w-4 h-4 fill-current animate-heartbeat" />
           <span>Putar Cerita Manis Kita</span>
@@ -143,7 +143,7 @@ export default function HeroSection() {
 
         <a
           href="#photos"
-          className="px-6 py-3.5 rounded-full bg-luxury-surface/90 border border-rose-400/30 text-rose-200 font-medium text-xs tracking-widest uppercase hover:bg-rose-500/15 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+          className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-luxury-surface/90 border border-rose-400/30 text-rose-200 font-medium text-xs tracking-wider sm:tracking-widest uppercase hover:bg-rose-500/15 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
         >
           <Sparkles className="w-4 h-4 text-rose-400 animate-spin-slow" />
           <span>Lihat Dua Foto Kita</span>

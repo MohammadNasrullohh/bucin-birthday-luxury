@@ -25,29 +25,29 @@ export default function PhotoLightboxModal() {
       />
 
       {/* Main Lightbox Box */}
-      <div className="relative z-10 max-w-4xl w-full max-h-[90vh] overflow-y-auto bg-luxury-surface border border-luxury-gold/30 rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+      <div className="relative z-10 max-w-4xl w-full max-h-[88vh] overflow-y-auto bg-luxury-surface border border-rose-500/30 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
         
         {/* Close Button */}
         <button
           type="button"
           onClick={() => setActivePhotoModal(null)}
-          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-colors shadow-lg"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-10 h-10 rounded-full bg-black/70 border border-white/20 text-white flex items-center justify-center hover:bg-rose-500 hover:text-white transition-colors shadow-lg"
           title="Tutup (Esc)"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Left Side: High Res Image (60%) */}
-        <div className="md:w-3/5 bg-black flex items-center justify-center relative min-h-[300px]">
+        <div className="md:w-3/5 bg-black flex items-center justify-center relative min-h-[240px] sm:min-h-[300px]">
           <img
             src={activePhotoModal.url}
             alt={activePhotoModal.title}
-            className="w-full h-full max-h-[80vh] object-contain"
+            className="w-full h-full max-h-[50vh] sm:max-h-[80vh] object-contain"
           />
         </div>
 
         {/* Right Side: Editorial Info (40%) */}
-        <div className="md:w-2/5 p-6 sm:p-8 flex flex-col justify-between bg-luxury-card border-t md:border-t-0 md:border-l border-luxury-gold/20">
+        <div className="md:w-2/5 p-5 sm:p-8 flex flex-col justify-between bg-luxury-card border-t md:border-t-0 md:border-l border-rose-500/20">
           <div>
             {/* Tag & Date */}
             <div className="flex items-center justify-between text-xs text-luxury-gold mb-3 font-mono">

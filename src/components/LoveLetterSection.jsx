@@ -48,19 +48,19 @@ export default function LoveLetterSection() {
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="relative rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#181625] via-[#13111F] to-[#0D0C15] border border-luxury-gold/30 shadow-2xl shadow-black/90 overflow-hidden"
+        className="relative rounded-2xl sm:rounded-3xl p-5 sm:p-14 bg-gradient-to-b from-[#181625] via-[#13111F] to-[#0D0C15] border border-luxury-gold/30 shadow-2xl shadow-black/90 overflow-hidden"
       >
         {/* Decorative corner borders */}
-        <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-luxury-gold/50" />
-        <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-luxury-gold/50" />
-        <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-luxury-gold/50" />
-        <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-luxury-gold/50" />
+        <div className="absolute top-3 left-3 sm:top-4 sm:left-4 w-5 h-5 sm:w-6 sm:h-6 border-t-2 border-l-2 border-luxury-gold/50" />
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-5 h-5 sm:w-6 sm:h-6 border-t-2 border-r-2 border-luxury-gold/50" />
+        <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-5 h-5 sm:w-6 sm:h-6 border-b-2 border-l-2 border-luxury-gold/50" />
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-5 h-5 sm:w-6 sm:h-6 border-b-2 border-r-2 border-luxury-gold/50" />
 
         {/* Top Wax Stamp & Date */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pb-8 mb-8 border-b border-luxury-gold/15 gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between pb-6 sm:pb-8 mb-6 sm:mb-8 border-b border-luxury-gold/15 gap-4">
           <div className="flex items-center gap-3">
             {/* Miniature Wax Seal */}
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FDA4AF] to-[#9F1239] p-[2px] shadow-md flex items-center justify-center">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FDA4AF] to-[#9F1239] p-[2px] shadow-md flex items-center justify-center">
               <div className="w-full h-full rounded-full bg-[#1C0916] flex items-center justify-center border border-rose-400/50">
                 <Heart className="w-5 h-5 text-rose-400 fill-rose-500/80" />
               </div>
@@ -69,7 +69,7 @@ export default function LoveLetterSection() {
               <p className="text-[10px] tracking-widest uppercase font-medium text-rose-300">
                 Surat Cinta Spesial
               </p>
-              <p className="font-serif text-sm text-white">
+              <p className="font-serif text-xs sm:text-sm text-white">
                 Hari Ulang Tahun yang Indah
               </p>
             </div>
@@ -90,24 +90,24 @@ export default function LoveLetterSection() {
         </div>
 
         {/* Heading */}
-        <h3 className="font-serif text-2xl sm:text-4xl font-bold text-gold-gradient mb-3">
+        <h3 className="font-serif text-xl sm:text-4xl font-bold text-gold-gradient mb-2 sm:mb-3">
           {letter.heading}
         </h3>
-        <p className="text-xs text-luxury-muted font-light italic mb-8">
+        <p className="text-xs text-luxury-muted font-light italic mb-6 sm:mb-8">
           {letter.subheading}
         </p>
 
         {/* Letter Paragraphs with Cormorant Garamond typography */}
-        <div className="space-y-6 text-luxury-ivory/90 font-serif text-base sm:text-lg leading-relaxed font-light tracking-wide text-justify">
+        <div className="space-y-5 sm:space-y-6 text-luxury-ivory/90 font-serif text-sm sm:text-lg leading-relaxed font-light tracking-wide text-left sm:text-justify">
           {paragraphs.map((p, idx) => (
-            <p key={idx} className="first-letter:text-3xl first-letter:font-bold first-letter:text-luxury-gold">
+            <p key={idx} className="first-letter:text-2xl sm:first-letter:text-3xl first-letter:font-bold first-letter:text-luxury-gold">
               {p}
             </p>
           ))}
         </div>
 
         {/* Signature & Sign-Off Section */}
-        <div className="mt-14 pt-8 border-t border-luxury-gold/15 flex flex-col sm:flex-row items-end justify-between gap-6">
+        <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-luxury-gold/15 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-5 sm:gap-6">
           <div className="text-left w-full sm:w-auto">
             <p className="text-xs text-luxury-muted font-light tracking-wider uppercase mb-1">
               Catatan Khusus:
@@ -117,11 +117,11 @@ export default function LoveLetterSection() {
             </p>
           </div>
 
-          <div className="text-right w-full sm:w-auto">
-            <p className="text-sm font-light text-luxury-muted mb-2">
+          <div className="text-left sm:text-right w-full sm:w-auto">
+            <p className="text-xs sm:text-sm font-light text-luxury-muted mb-1 sm:mb-2">
               {letter.closing || "Milikmu seutuhnya,"}
             </p>
-            <p className="font-serif italic text-2xl sm:text-3xl font-bold text-gold-gradient">
+            <p className="font-serif italic text-xl sm:text-3xl font-bold text-gold-gradient">
               {letter.signature || "Teman Seumur Hidupmu"}
             </p>
           </div>

@@ -44,11 +44,11 @@ export default function DualPhotoShowcase() {
         </p>
 
         {/* View Switcher Pill */}
-        <div className="inline-flex items-center p-1.5 rounded-full bg-luxury-surface/80 border border-rose-500/25 mt-6 text-xs backdrop-blur-md">
+        <div className="inline-flex items-center p-1 sm:p-1.5 rounded-full bg-luxury-surface/80 border border-rose-500/25 mt-5 sm:mt-6 text-xs backdrop-blur-md max-w-full">
           <button
             type="button"
             onClick={() => setViewMode('side-by-side')}
-            className={`px-5 py-2 rounded-full transition-all duration-300 ${
+            className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs transition-all duration-300 ${
               viewMode === 'side-by-side'
                 ? 'bg-rose-500 text-white font-semibold shadow-lg shadow-rose-950/40'
                 : 'text-luxury-muted hover:text-white'
@@ -59,7 +59,7 @@ export default function DualPhotoShowcase() {
           <button
             type="button"
             onClick={() => setViewMode('single-focus')}
-            className={`px-5 py-2 rounded-full transition-all duration-300 ${
+            className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs transition-all duration-300 ${
               viewMode === 'single-focus'
                 ? 'bg-rose-500 text-white font-semibold shadow-lg shadow-rose-950/40'
                 : 'text-luxury-muted hover:text-white'
@@ -185,7 +185,7 @@ function PhotoCard({ photo, index, onZoom, rotation }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform: transformStyle }}
-      className={`relative group rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#1C0B18] via-[#140811] to-[#0A0409] border border-rose-500/25 shadow-2xl transition-all duration-300 ${rotation}`}
+      className={`relative group rounded-2xl sm:rounded-3xl p-4 sm:p-8 bg-gradient-to-b from-[#1C0B18] via-[#140811] to-[#0A0409] border border-rose-500/25 shadow-2xl transition-all duration-300 ${rotation}`}
     >
       {/* Top Rose Badge */}
       <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-4 py-1 rounded-full bg-gradient-to-r from-[#FFE4E8] via-[#FB7185] to-[#BE123C] shadow-lg text-[9px] font-medium tracking-widest text-white uppercase">

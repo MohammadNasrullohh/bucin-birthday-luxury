@@ -23,6 +23,8 @@
     background-color: #080306;
     color: #FFF5F7;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }
 
