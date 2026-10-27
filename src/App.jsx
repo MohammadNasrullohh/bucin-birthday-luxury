@@ -16,6 +16,7 @@ import CinematicParticles from './components/CinematicParticles';
 import CursorGlow from './components/CursorGlow';
 import CinematicFrame from './components/CinematicFrame';
 import CinematicMovieMode from './components/CinematicMovieMode';
+import AutoScrollDirector from './components/AutoScrollDirector';
 
 function MainApp() {
   const { isMovieModeOpen, setIsMovieModeOpen } = useCelebration();
@@ -77,6 +78,9 @@ function MainApp() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Auto-Scroll Cinematic Director (Smooth Auto-Glide Down) */}
+      <AutoScrollDirector />
 
       {/* Full Cinema Movie Player Modal (Mode Bioskop Berjalan) */}
       <CinematicMovieMode
