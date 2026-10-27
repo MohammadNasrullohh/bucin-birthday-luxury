@@ -30,33 +30,24 @@ export default function QrCodeModal({ isOpen, onClose }) {
           Arahkan kamera ponsel untuk membuka kado ulang tahun ini
         </p>
 
-        {/* QR Code Preview Frame */}
-        <div className="relative p-3 rounded-2xl bg-[#FFF0F5] border-2 border-rose-400/50 shadow-xl mb-6">
+        {/* Heart-Shaped QR Code (Bentuk Love Asli, Bukan Kotak) */}
+        <div className="relative my-3 flex items-center justify-center animate-float">
           <img
-            src="/qr-code-love.png"
-            alt="Love Pink QR Code"
-            className="w-56 h-56 rounded-xl object-contain"
+            src="/qr-code-love-heart.png"
+            alt="Barcode Bentuk Love Megawati"
+            className="w-64 h-64 object-contain drop-shadow-[0_12px_40px_rgba(244,63,94,0.55)]"
           />
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col w-full gap-2.5">
+        <div className="flex flex-col w-full gap-2.5 mt-2">
           <a
-            href="/qr-code-love-card.png"
-            download="Kado-Ulang-Tahun-Megawati-QR.png"
+            href="/qr-code-love-heart.png"
+            download="Barcode-Cinta-Love-Megawati.png"
             className="animate-shimmer py-3 px-5 rounded-full bg-gradient-to-r from-[#FDA4AF] via-[#F43F5E] to-[#BE123C] text-white font-semibold text-xs tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
           >
             <Download className="w-4 h-4" />
-            <span>Unduh Kartu Barcode (HD)</span>
-          </a>
-
-          <a
-            href="/qr-code-love.png"
-            download="QR-Love-Pink.png"
-            className="py-2.5 px-4 rounded-full bg-luxury-surface border border-rose-400/30 text-rose-200 text-xs font-medium hover:bg-rose-500/15 transition-all flex items-center justify-center gap-2"
-          >
-            <QrCode className="w-3.5 h-3.5" />
-            <span>Unduh Barcode Saja</span>
+            <span>Unduh Barcode Bentuk Love (HD)</span>
           </a>
         </div>
       </div>
