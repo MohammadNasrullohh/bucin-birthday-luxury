@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 import { CelebrationProvider, useCelebration } from './context/CelebrationContext';
 import IntroScreen from './components/IntroScreen';
-import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import CinematicFilmReel from './components/CinematicFilmReel';
 import DualPhotoShowcase from './components/DualPhotoShowcase';
@@ -59,9 +58,6 @@ function MainApp() {
 
       {/* Intro Curtain Screen */}
       <IntroScreen />
-
-      {/* Fixed Navigation & Music Bar */}
-      <Navbar />
 
       {/* Main Content Flow */}
       <main className="relative z-10">
