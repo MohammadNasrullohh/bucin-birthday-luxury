@@ -63,23 +63,30 @@ export default function IntroScreen() {
           </p>
 
           {/* Wax Seal Button (Interactive Trigger) */}
-          <div className="relative group cursor-pointer mb-8" onClick={handleOpen}>
-            {/* Pulsing ring */}
-            <div className="absolute -inset-4 rounded-full bg-rose-500/30 blur-lg group-hover:bg-rose-500/50 transition-all duration-500 animate-pulse" />
+          <div className="relative group cursor-pointer mb-7 flex flex-col items-center" onClick={handleOpen}>
+            {/* Ambient Pulsing Glow */}
+            <div className="absolute top-0 w-24 h-24 rounded-full bg-rose-500/30 blur-xl group-hover:bg-rose-500/50 transition-all duration-500 animate-pulse" />
 
+            {/* Circular Wax Seal */}
             <button
               type="button"
-              className="animate-shimmer relative w-22 h-22 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#FDA4AF] via-[#F43F5E] to-[#881337] p-[2.5px] shadow-2xl shadow-rose-950/70 transition-transform duration-300 group-hover:scale-110 active:scale-95 flex items-center justify-center"
-              title="Klik untuk membuka surat dan memutar lagu"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#FDA4AF] via-[#F43F5E] to-[#881337] p-[2.5px] shadow-2xl shadow-rose-950/80 transition-transform duration-300 group-hover:scale-105 active:scale-95 flex items-center justify-center animate-shimmer"
+              title="Sentuh untuk membuka surat cinta"
             >
-              <div className="w-full h-full rounded-full bg-[#1A0A14] flex flex-col items-center justify-center border border-rose-400/50 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-rose-500/30 to-transparent opacity-70" />
-                <Heart className="w-8 h-8 text-rose-400 fill-rose-500/50 mb-1 group-hover:scale-115 transition-transform duration-300 animate-heartbeat" />
-                <span className="text-[10px] font-serif tracking-widest text-rose-200 uppercase font-bold">
-                  Buka Surat
-                </span>
+              <div className="w-full h-full rounded-full bg-gradient-to-b from-[#250B1C] to-[#12040D] flex items-center justify-center border border-rose-400/50 relative overflow-hidden shadow-inner">
+                <div className="absolute inset-0 bg-gradient-to-t from-rose-500/25 to-transparent opacity-70" />
+                {/* Concentric engraved ring of royal wax seal */}
+                <div className="w-[82%] h-[82%] rounded-full border border-rose-400/25 border-dashed flex items-center justify-center">
+                  <Heart className="w-8 h-8 sm:w-9 sm:h-9 text-rose-300 fill-rose-500/60 drop-shadow-[0_0_12px_rgba(244,63,94,0.7)] group-hover:scale-110 transition-transform duration-300 animate-heartbeat" />
+                </div>
               </div>
             </button>
+
+            {/* Clean, Elegant Action Pill */}
+            <div className="mt-3.5 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-rose-500/15 border border-rose-400/35 backdrop-blur-sm text-rose-200 text-xs font-serif tracking-widest uppercase font-semibold shadow-md group-hover:bg-rose-500/25 group-hover:border-rose-400/60 transition-all">
+              <span>Buka Surat</span>
+              <Sparkles className="w-3 h-3 text-rose-300" />
+            </div>
           </div>
 
           {/* Audio Track Tag & Hint */}
