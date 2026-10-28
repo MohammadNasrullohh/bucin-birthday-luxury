@@ -15,19 +15,19 @@ export default function AutoScrollDirector() {
   const [userPaused, setUserPaused] = useState(false);
   const rafRef = useRef(null);
 
-  // Automatically start slow romantic scrolling down 3.2 seconds after letter is opened
+  // Automatically start romantic scrolling down 2 seconds after letter is opened
   useEffect(() => {
     if (hasStarted && !userPaused && !isMovieModeOpen) {
       const startTimer = setTimeout(() => {
         setIsAutoScrollActive(true);
         setShowPill(true);
-      }, 3200);
+      }, 2000);
 
       return () => clearTimeout(startTimer);
     }
   }, [hasStarted, userPaused, isMovieModeOpen, setIsAutoScrollActive]);
 
-  // Continuous buttery smooth auto-scroll loop (speed: 0.95px per frame)
+  // Continuous buttery smooth auto-scroll loop (speed: 1.2px per frame)
   useEffect(() => {
     if (!isAutoScrollActive || isMovieModeOpen) {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -35,7 +35,7 @@ export default function AutoScrollDirector() {
     }
 
     const step = () => {
-      window.scrollBy(0, 0.85);
+      window.scrollBy(0, 1.2);
 
       // Check if reached bottom of the page
       const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 20;

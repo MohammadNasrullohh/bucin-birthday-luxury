@@ -13,7 +13,7 @@ export default function IntroScreen() {
     setIsOpening(true);
     setTimeout(() => {
       startExperience();
-    }, 1100);
+    }, 750);
   };
 
   return (
